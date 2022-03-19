@@ -7,8 +7,8 @@ function Navbar() {
             <ul className='navv'>
                 
            <li> <Link className='lnk' to="/">Home</Link> </li>
-           <li> <Link className='lnk' to="Profile">Profile</Link> </li>
-           <li> <Link className='lnk' to="/Buy">Buy</Link> </li>
+           <li> <Link className='lnk' to="/profile">Profile</Link> </li>
+           <li> <Link className='lnk' to="/buy">Buy</Link> </li>
           
               
             </ul>
