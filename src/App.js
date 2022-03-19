@@ -1,11 +1,9 @@
-
 import './App.css';
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from './component/Home';
-import Navbar from './component/Navbar';
-import Profile from './component/Profile';
-import Buy from './component/Buy';
+
+import Admin from './component/Admin/Admin';
+import User from './component/User/User';
 
 
 function App() {
@@ -13,11 +11,10 @@ function App() {
     <div className="App">
    
     
-       <Navbar/>
+      
        <Routes>
-     <Route path="/" element={<Home />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Buy" element={<Buy />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/user" element={<User/>} />
      </Routes>
     </div>
   );

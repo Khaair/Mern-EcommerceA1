@@ -2,7 +2,7 @@ import React from 'react'
 
  function Buy() {
   return (
-    <div>Route</div>
+    <div>Buy</div>
   )
 }
 
