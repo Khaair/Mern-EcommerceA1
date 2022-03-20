@@ -8,7 +8,7 @@ import './Footer.css'
               <div className='footerContainers'>
             <div className='fone'>
             <ul>
-                <a href><li> About Jiji</li></a>
+                <a href><li> About</li></a>
                 <a href><li> We are hiring!</li></a>
                 <a href><li> Terms &amp; Conditions</li></a>
                 <a href><li> Privacy Policy</li></a>
@@ -19,7 +19,7 @@ import './Footer.css'
 
             <div className='ftwo'>
               <ul>
-                <a href><li> About Jiji</li></a>
+                <a href><li> About</li></a>
                 <a href><li> We are hiring!</li></a>
                 <a href><li> Terms &amp; Conditions</li></a>
                 <a href><li> Privacy Policy</li></a>
@@ -29,7 +29,7 @@ import './Footer.css'
 
             <div className='fthree'>
             <ul>
-                <a href><li> About Jiji</li></a>
+                <a href><li> About</li></a>
                 <a href><li> We are hiring!</li></a>
                 <a href><li> Terms &amp; Conditions</li></a>
                 <a href><li> Privacy Policy</li></a>
@@ -47,7 +47,7 @@ import './Footer.css'
 
             <div className='ffive'>
             <ul>
-                <a href><li> About Jiji</li></a>
+                <a href><li> About</li></a>
                 <a href><li> We are hiring!</li></a>
                 <a href><li> Terms &amp; Conditions</li></a>
                 <a href><li> Privacy Policy</li></a>
