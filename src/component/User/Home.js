@@ -1,5 +1,7 @@
 import React from 'react'
+import Footer from './Footer';
 import './Home.css'
+import PCard from './PCard';
 
 
 function Home() {
@@ -9,7 +11,7 @@ function Home() {
         <div className="one">
         </div>
         <div className="two">
-          
+
         </div>
         <div className="three">
           <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -40,31 +42,30 @@ function Home() {
           </div>
         </div>
         <div className="four">
+       <div className='cardd'>
+       <PCard/>
+       <PCard/>
+       <PCard/>
+       <PCard/>
+       </div>
+
+       <div className='cardd'>
+       <PCard/>
+       <PCard/>
+       <PCard/>
+       <PCard/>
+       </div>
+
+       
+      
+       
+       
+          
+
         </div>
         <div className="five">
-          <div className='footerContainers'>
-            <div className='fone'>
-            fone
-            </div>
+          <Footer/>
 
-            <div className='ftwo'>
-            ftwo
-            </div>
-
-            <div className='fthree'>
-            fthree
-            </div>
-
-            <div className='ffour'>
-            ffour
-            
-            </div>
-
-            <div className='ffive'>
-            ffive
-            
-            </div>
-          </div>
         </div>
       </div>
 
