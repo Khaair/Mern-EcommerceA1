@@ -1,8 +1,17 @@
 import React from 'react'
+import './Profile.css'
 
 function Profile() {
   return (
-    <div>Profile</div>
+    <div>
+     <div className="profileContainer"> 
+  <div className="pone">
+  </div>
+  <div className="ptwo">
+  </div>
+</div>
+
+    </div>
   )
 }
 
