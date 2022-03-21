@@ -5,7 +5,7 @@ export default function Register() {
   return (
     <div>
        <div className="div1">
-  <div className="container">
+  <div className="containerss">
     <h2>Registration Form</h2>
     <form>
       <label className="name">First Name</label>

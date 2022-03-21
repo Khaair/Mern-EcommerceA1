@@ -16,7 +16,7 @@
     
     width: 100%;
     margin: 30px;
-    height: 370px;
+    height: auto;
     background-color: #F2F2F2;
     padding: 30px;
     box-shadow: 5px black;
@@ -68,3 +68,41 @@
     .wcenter{
         text-align: center;
     }
+
+
+    .profileContainer{
+
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin-top: 50px;
+      
+      }
+      
+      .pone{
+       
+      
+        grid-column: 1/6;
+      }
+      
+      
+      .ptwo{
+       
+        
+        
+        grid-column: 6/-1;
+      }
+      
+    
+      .imgg{
+        height: 200px;
+        width: 200px;
+        margin-left: 300px;
+      }
+
+      .titlee{
+          background-color: black;
+          margin-top: 15px;
+          color: aliceblue;
+      }

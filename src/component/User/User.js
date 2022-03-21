@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Single from './Single';
 import Wishlist from './Wishlist';
 import Register from './Register';
+import AddtoCart from './AddtoCart';
 
 
 
@@ -30,6 +31,7 @@ function User() {
         <Route  path="/wishlist" element={<Wishlist />} />
 
         <Route  path="/register" element={<Register />} />
+        <Route  path="/addtocart" element={<AddtoCart />} />
        </Routes> 
      
     </div>

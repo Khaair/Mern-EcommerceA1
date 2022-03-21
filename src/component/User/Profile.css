@@ -3,13 +3,13 @@
     height: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60px auto 50px 50px;
+    grid-template-rows: auto;
+    margin-top: 50px;
   
   }
   
   .pone{
    
-    background-color: green;
   
     grid-column: 1/6;
   }
@@ -17,8 +17,14 @@
   
   .ptwo{
    
-    background-color: orange;
+    
     
     grid-column: 6/-1;
   }
   
+
+  .imgg{
+    height: 200px;
+    width: 200px;
+    margin-left: 300px;
+  }

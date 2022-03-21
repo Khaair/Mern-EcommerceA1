@@ -1,7 +1,7 @@
 import React from 'react'
-import './Wishlist.css'
+import './AddtoCart.css'
 
-export default function Wishlist() {
+export default function AddtoCart() {
     return (
         <div>
 
@@ -9,12 +9,12 @@ export default function Wishlist() {
 
                 <div className="wcontainer">
                     <div className='titlee'>
-                        <h2>My Wish List</h2>
+                        <h2>My Cart</h2>
                     </div>
                     <div className="profileContainer">
 
                         <div className="pone">
-                            <img className='imgg' src='img/l3.jpg' alt='hhh' />
+                            <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
                         </div>
                         <div className="ptwo">
                             <h3>Product Name: Product 01</h3>
@@ -30,7 +30,7 @@ export default function Wishlist() {
                     <div className="profileContainer">
 
                         <div className="pone">
-                            <img className='imgg' src='img/l3.jpg' alt='hhh' />
+                            <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
                         </div>
                         <div className="ptwo">
                             <h3>Product Name: Product 01</h3>

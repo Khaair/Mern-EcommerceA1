@@ -12,6 +12,7 @@ import Contact from './component/User/Contact';
 import Single from './component/User/Single';
 import Wishlist from './component/User/Wishlist';
 import Register from './component/User/Register';
+import AddtoCart from './component/User/AddtoCart';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="single" element={<Single />} />
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="register" element={<Register />} />
+          <Route path="addtocart" element={<AddtoCart />} />
        </Route>
         <Route exact path="/admin" element={<Admin />} />
      </Routes>

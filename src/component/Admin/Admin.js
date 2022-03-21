@@ -18,7 +18,7 @@ function Admin() {
                         <br />
                         <input className="text" type="password" name placeholder="Enter Password" />
 
-                        <button className="btn">SUBMIT</button>
+                        <button className="btnn">SUBMIT</button>
 
 
 
