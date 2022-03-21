@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from './Footer';
 import './Home.css'
 import PCard from './PCard';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -43,7 +44,7 @@ function Home() {
         </div>
         <div className="four">
        <div className='cardd'>
-       <PCard/>
+      <Link className='llnk' to="/single"><PCard/></Link> 
        <PCard/>
        <PCard/>
        <PCard/>

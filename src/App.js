@@ -9,12 +9,16 @@ import Buy from './component/User/Profile';
 import Home from './component/User/Home';
 import About from './component/User/About';
 import Contact from './component/User/Contact';
+import Single from './component/User/Single';
+import Wishlist from './component/User/Wishlist';
+import Register from './component/User/Register';
 
 
 
 
 function App() {
   return (
+    
     <BrowserRouter>
     
        <Routes>
@@ -24,6 +28,9 @@ function App() {
           <Route path="buy" element={<Buy />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="single" element={<Single />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="register" element={<Register />} />
        </Route>
         <Route exact path="/admin" element={<Admin />} />
      </Routes>
