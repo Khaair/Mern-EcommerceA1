@@ -1,5 +1,6 @@
 import React from 'react'
 import './AddtoCart.css'
+import { Link } from "react-router-dom";
 
 export default function AddtoCart() {
     return (
@@ -40,6 +41,18 @@ export default function AddtoCart() {
                             </h6>
                         </div>
                     </div>
+                    <hr></hr>
+                    <div>
+                    <input className="text" type="text" name placeholder="Cupon Code" />
+                    
+                       <div className='llk'>
+                       <button  className='cuponbtn' >Submit</button> 
+                        <Link to="/checkout"><button className='checkoutbtn'>Check Out</button></Link> 
+                       </div>
+
+                    </div>
+                    
+
                 </div>
             </div>
         </div>

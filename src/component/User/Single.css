@@ -6,22 +6,29 @@
 }
 
 .sone{
-    background-color: green;
+    background-color: wheat;
   
     grid-column: 1/6;
 }
 
 .stwo{
-    background-color: orange;
+   
   
     grid-column: 6/-1;
 }
 
 
 .sthree{
-    background-color: red;
+   
   
     grid-column: 1/-1;
+}
+
+.sfour{
+background-color: black;
+height: 400px;
+
+  grid-column: 1/-1;
 }
 
 

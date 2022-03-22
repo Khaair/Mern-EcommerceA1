@@ -5,6 +5,11 @@
     grid-template-rows: 0px auto auto auto;
     
   }
+
+  .colorr{
+  background-color:  navy;
+  color: aliceblue;
+  }
   
   .one{
    background-color: black;
@@ -12,13 +17,13 @@
   }
   
   .two{
-   background-color: gray;
-   grid-column: 1/5;
+   background-color: navy;
+   grid-column: 1/4;
   }
   
   
   .three{
-   grid-column: 5/-1;
+   grid-column: 4/-1;
   }
   
  .four{

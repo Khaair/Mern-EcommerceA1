@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter,Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Admin from './component/Admin/Admin';
 import User from './component/User/User';
@@ -13,18 +13,24 @@ import Single from './component/User/Single';
 import Wishlist from './component/User/Wishlist';
 import Register from './component/User/Register';
 import AddtoCart from './component/User/AddtoCart';
+import Checkout from './component/User/Checkout';
+import Payment from './component/User/Payment';
+import Order from './component/User/Order';
+import OrderTracking from './component/User/OrderTracking';
+import DeshBoard from './component/Admin/DeshBoard';
+import AddProduct from './component/Admin/AddProduct';
 
 
 
 
 function App() {
   return (
-    
+
     <BrowserRouter>
-    
-       <Routes>
-       <Route exact path="/" element={<User/>}>
-       <Route path="home" element={<Home />} />
+
+      <Routes>
+        <Route exact path="/" element={<User />}>
+          <Route path="home" element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="buy" element={<Buy />} />
           <Route path="about" element={<About />} />
@@ -33,10 +39,19 @@ function App() {
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="register" element={<Register />} />
           <Route path="addtocart" element={<AddtoCart />} />
-       </Route>
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="order" element={<Order />} />
+          <Route path="ordertracking" element={<OrderTracking />} />
+
+        </Route>
         <Route exact path="/admin" element={<Admin />} />
-     </Routes>
-   
+        <Route path="deshboard" element={<DeshBoard />} />
+        <Route path="addproduct" element={<AddProduct />} />
+
+       
+      </Routes>
+
 
     </BrowserRouter>
   );

@@ -12,6 +12,18 @@ function Home() {
         <div className="one">
         </div>
         <div className="two">
+        <ul className="list-group">
+  <li className="list-group-item colorr">Categories</li>
+  <li className="list-group-item colorr ">Electric</li>
+  <li className="list-group-item colorr">Laptop & Computer</li>
+  <li className="list-group-item colorr">Health & Beauty</li>
+  <li className="list-group-item colorr">Mom And Baby</li>
+  <li className="list-group-item colorr">Watches & Sunglasses</li>
+  <li className="list-group-item colorr">Accessories</li>
+  <li className="list-group-item colorr">Home & Living</li>
+  <li className="list-group-item colorr">TGroceries</li>
+  
+</ul>
 
         </div>
         <div className="three">
@@ -43,29 +55,29 @@ function Home() {
           </div>
         </div>
         <div className="four">
-       <div className='cardd'>
-      <Link className='llnk' to="/single"><PCard/></Link> 
-       <PCard/>
-       <PCard/>
-       <PCard/>
-       </div>
+          <div className='cardd'>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <PCard />
+            <PCard />
+            <PCard />
+          </div>
 
-       <div className='cardd'>
-       <PCard/>
-       <PCard/>
-       <PCard/>
-       <PCard/>
-       </div>
+          <div className='cardd'>
+            <PCard />
+            <PCard />
+            <PCard />
+            <PCard />
+          </div>
 
-       
-      
-       
-       
-          
+
+
+
+
+
 
         </div>
         <div className="five">
-          <Footer/>
+          <Footer />
 
         </div>
       </div>

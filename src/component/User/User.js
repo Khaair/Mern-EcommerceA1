@@ -11,6 +11,13 @@ import Single from './Single';
 import Wishlist from './Wishlist';
 import Register from './Register';
 import AddtoCart from './AddtoCart';
+import Checkout from './Checkout';
+import Payment from './Payment';
+import Order from './Order';
+import OrderTracking from './OrderTracking';
+
+
+
 
 
 
@@ -32,7 +39,12 @@ function User() {
 
         <Route  path="/register" element={<Register />} />
         <Route  path="/addtocart" element={<AddtoCart />} />
+        <Route  path="/checkout" element={<Checkout />} />
+        <Route  path="/payment" element={<Payment />} />
+        <Route  path="/order" element={<Order />} />
+        <Route  path="/ordertracking" element={<OrderTracking />} />
        </Routes> 
+    
      
     </div>
   )
