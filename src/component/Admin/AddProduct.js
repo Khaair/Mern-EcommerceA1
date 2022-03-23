@@ -4,9 +4,9 @@ import './AddProduct.css'
 
 export default function AddProduct() {
     return (
-        <div >
+        <div >  
          
-            <div className='addproduct'>
+            <div className='addproduct orcontainerss'>
             <h1>Add Product</h1>
                 <form>
                     <div className="mb-3">

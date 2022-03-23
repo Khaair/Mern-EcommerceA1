@@ -5,8 +5,8 @@ export default function OrderManage() {
   return (
     <>
 
-      <div>
-        <h2>Colored Table Header</h2>
+      <div className='orcontainerss' >
+        <h2>Order Manage </h2>
         <table>
           <tbody><tr>
             <th>SL</th>
@@ -42,6 +42,45 @@ export default function OrderManage() {
               <td>$100</td>
               <td>$100</td>
             </tr>
+            <tr>
+              <td>Cleveland</td>
+              <td>Brown</td>
+              <td>$250</td>
+              <td>$100</td>
+              <td>$100</td>
+              <td>$100</td>
+            </tr>
+
+            <tr>
+              <td>Cleveland</td>
+              <td>Brown</td>
+              <td>$250</td>
+              <td>$100</td>
+              <td>$100</td>
+              <td>$100</td>
+            </tr>
+
+
+            <tr>
+              <td>Cleveland</td>
+              <td>Brown</td>
+              <td>$250</td>
+              <td>$100</td>
+              <td>$100</td>
+              <td>$100</td>
+            </tr>
+
+
+
+            <tr>
+              <td>Cleveland</td>
+              <td>Brown</td>
+              <td>$250</td>
+              <td>$100</td>
+              <td>$100</td>
+              <td>$100</td>
+            </tr>
+
             <tr>
               <td>Cleveland</td>
               <td>Brown</td>
