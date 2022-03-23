@@ -7,10 +7,19 @@ function Navbar() {
     return (
         <div className='navcontainer'>
             
-        
-            <ul className='navv'>
            
+            <ul className='navv'>
 
+              <div className='logo'>
+              
+            <h3 >Logo</h3>
+              </div>
+
+                 <div className='searchh'>
+                
+                 <input className='inp'></input>
+                 </div>
+               
                 <li> <Link className='lnk' to="/">Home</Link> </li>
                
                 

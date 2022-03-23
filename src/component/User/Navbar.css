@@ -4,6 +4,25 @@
   
 }
 
+.searchh{
+
+ margin-right: 130px ;
+ display: flex;
+}
+
+.inp{
+  border-radius: 20px;
+ height: 50px;
+ margin-top: 8px;
+}
+
+.logo{
+  color: wheat;
+  margin-right: 50px ;
+  margin-top: 12px;
+
+}
+
 ul {
     list-style-type: none;
     margin: 0;
