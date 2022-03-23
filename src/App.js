@@ -19,6 +19,10 @@ import Order from './component/User/Order';
 import OrderTracking from './component/User/OrderTracking';
 import DeshBoard from './component/Admin/DeshBoard';
 import AddProduct from './component/Admin/AddProduct';
+import OrderManage from './component/Admin/OrderManage';
+import ProductManage from './component/Admin/ProductManage';
+import UserManage from './component/Admin/UserManage';
+
 
 
 
@@ -29,6 +33,7 @@ function App() {
     <BrowserRouter>
 
       <Routes>
+        
         <Route exact path="/" element={<User />}>
           <Route path="home" element={<Home />} />
           <Route path="profile" element={<Profile />} />
@@ -46,9 +51,14 @@ function App() {
 
         </Route>
         <Route exact path="/admin" element={<Admin />} />
-        <Route path="deshboard" element={<DeshBoard />} />
+        <Route path="/deshboard" element={<DeshBoard />} />
         <Route path="addproduct" element={<AddProduct />} />
+        <Route path="ordermanage" element={<OrderManage />} />
+        <Route path="productmanage" element={<ProductManage />} /> 
+        <Route path="usermanage" element={<UserManage />} />
 
+
+       
        
       </Routes>
 

@@ -1,6 +1,6 @@
 .navv{
   display: flex;
-  justify-content: center;
+  justify-content: right;
   
 }
 
@@ -30,4 +30,7 @@ ul {
     color:black;
     border-radius: 7px;
   }
-  
+
+  .zzz{
+    z-index: 1;
+  }

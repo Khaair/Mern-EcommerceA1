@@ -7,23 +7,32 @@
   }
 
   .colorr{
-  background-color:  navy;
+  background-color:  #111111;
   color: aliceblue;
+  }
+
+  .colorr:hover{
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
   }
   
   .one{
    background-color: black;
+   
   grid-column: 1/-1;
   }
   
   .two{
-   background-color: navy;
+   background-color: #111111;
    grid-column: 1/4;
   }
   
   
   .three{
    grid-column: 4/-1;
+   position: relative;
+   z-index: 0;
   }
   
  .four{

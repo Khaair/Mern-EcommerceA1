@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
+
 function Navbar() {
     return (
         <div className='navcontainer'>
@@ -21,9 +22,24 @@ function Navbar() {
                 <li> <Link className='lnk' to="/wishlist"><img style={{height: '30px'}} src='img/wish-list.png' alt='kii'/></Link> </li>
                 <li> <Link className='lnk' to="/profile"><img style={{height: '30px'}} src='img/proo.png' alt='kii'/></Link> </li>
                 <li> <Link className='lnk' to="/register"><img style={{height: '30px'}} src='img/regg.png' alt='kii'/></Link> </li>
+                <li> <Link className='lnk' to="/admin"><img style={{height: '30px'}} src='img/Admin.png' alt='kii'/></Link> </li>
+
                 {/* <li>
-                    
+                <NavDropdown
+                id="nav-dropdown-dark-example"
+                title="Dropdown"
+                menuVariant="dark"
+                className='zzz'
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              </NavDropdown>
                 </li> */}
+
+
 
 
 
