@@ -18,27 +18,27 @@ export default function AddtoCart() {
                             <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
                         </div>
                         <div className="ptwo">
-                            <h3>Product Name: Product 01</h3>
-                            <h6 >Discover 159 free Registered Logo png images with transparent backgrounds.
+                            <h5>Product Name: Product 01</h5>
+                            <p className='peraaddtocart'>Discover 159 free Registered Logo png images with transparent backgrounds.
                                 Search more hd transparent Registered Logo image on KindPNG.
                                 Search more hd transparent Registered Logo image on KindPNG.
-                            </h6>
+                            </p>
                         </div>
                     </div>
 
                     <hr></hr>
 
-                    <div className="profileContainer">
+                    <div className="profileContainer"> 
 
                         <div className="pone">
                             <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
                         </div>
                         <div className="ptwo">
-                            <h3>Product Name: Product 01</h3>
-                            <h6 >Discover 159 free Registered Logo png images with transparent backgrounds.
+                            <h5>Product Name: Product 01</h5>
+                            <p className='peraaddtocart' >Discover 159 free Registered Logo png images with transparent backgrounds.
                                 Search more hd transparent Registered Logo image on KindPNG.
                                 Search more hd transparent Registered Logo image on KindPNG.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                     <hr></hr>

@@ -14,7 +14,7 @@ function Navbar() {
 
               <div className='logo'>
               
-            <h3 >Logo</h3>
+            <h3 >BD <span className='logospan'>ECom</span></h3>
               </div>
 
                  <div className='searchh'>
