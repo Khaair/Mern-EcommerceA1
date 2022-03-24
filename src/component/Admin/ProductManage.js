@@ -9,72 +9,104 @@ export default function ProductManage() {
         <h2>Product Manage</h2>
         <table>
           <tbody><tr>
-            <th>SL</th>
-            <th>Order ID</th>
-            <th>Status</th>
-            <th>Date/Time</th>
-            <th>Invoices</th>
-            <th>Order Details</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>SKU Number</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Weight</th>
+            <th>Category</th>
+            <th>Action</th>
 
           </tr>
             <tr>
               <td>Peter</td>
               <td>Griffin</td>
-              <td><button>Order</button></td>
-              <td>$100</td>
-              <td><button>Order</button></td>
-              <Link to="/ordertracking"><td><button>Check</button></td></Link>
-            </tr>
-            <tr>
-              <td>Lois</td>
               <td>Griffin</td>
-
-              <td><button>Order</button></td>
+            
               <td>$100</td>
-              <td><button>Order</button></td>
-              <td><button>Order</button></td>
-            </tr>
-            <tr>
-              <td>Joe</td>
-              <td>Swanson</td>
-              <td>$300</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
-            </tr>
-            <tr>
-              <td>Cleveland</td>
-              <td>Brown</td>
-              <td>$250</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
-            </tr>
-            <tr>
-              <td>Lois</td>
               <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>
+              <Link to="/editproduct"><td><button>Edit</button></td></Link>
+              <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+              </td>
+              
+             
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+            
+              <td>$100</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>
+              <Link to="/ordertracking"><td><button>Edit</button></td></Link>
+              <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+              </td>
+              
+             
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+            
+              <td>$100</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>
+              <Link to="/ordertracking"><td><button>Edit</button></td></Link>
+              <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+              </td>
+              
+             
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+            
+              <td>$100</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>
+              <Link to="/ordertracking"><td><button>Edit</button></td></Link>
+              <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+              </td>
+              
+             
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+            
+              <td>$100</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>Griffin</td>
+              <td>
+              <Link to="/editproduct"><td><button>Edit</button></td></Link>
+              <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+              </td>
+              
+             
+            </tr>
 
-              <td><button>Order</button></td>
-              <td>$100</td>
-              <td><button>Order</button></td>
-              <td><button>Order</button></td>
-            </tr>
-            <tr>
-              <td>Joe</td>
-              <td>Swanson</td>
-              <td>$300</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
-            </tr>
-            <tr>
-              <td>Cleveland</td>
-              <td>Brown</td>
-              <td>$250</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
-            </tr>
+        
           </tbody></table>
       </div>
     </>

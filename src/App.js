@@ -22,6 +22,11 @@ import AddProduct from './component/Admin/AddProduct';
 import OrderManage from './component/Admin/OrderManage';
 import ProductManage from './component/Admin/ProductManage';
 import UserManage from './component/Admin/UserManage';
+import EditUserProfile from './component/Admin/EditUserProfile';
+import EditProduct from './component/Admin/EditProduct';
+import EditOrder from './component/Admin/EditOrder';
+import UserProfile from './component/User/UserProfile';
+import Login from './component/User/Login';
 
 
 
@@ -48,6 +53,9 @@ function App() {
           <Route path="payment" element={<Payment />} />
           <Route path="order" element={<Order />} />
           <Route path="ordertracking" element={<OrderTracking />} />
+          <Route path="userprofile" element={<UserProfile />} />
+          <Route path="login" element={<Login />} />
+
 
         </Route>
         <Route exact path="/admin" element={<Admin />} />
@@ -56,6 +64,12 @@ function App() {
         <Route path="ordermanage" element={<OrderManage />} />
         <Route path="productmanage" element={<ProductManage />} /> 
         <Route path="usermanage" element={<UserManage />} />
+        <Route path="edituserprofile" element={<EditUserProfile />} />
+        <Route path="editproduct" element={<EditProduct />} />
+        <Route path="editorder" element={<EditOrder />} />
+
+
+
 
 
        

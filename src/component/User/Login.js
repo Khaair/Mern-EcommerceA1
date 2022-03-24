@@ -1,22 +1,16 @@
 import React from 'react'
-import './Profile.css'
-
 
 import { Link } from "react-router-dom";
 
 
-
-
-
-function Profile() {
+export default function Login() {
   return (
     <div>
       <Link to="/login"><button>Login</button></Link>
       <Link to="/register"><button>Register</button></Link>
     
       <Link to="/userprofile"><button>My Profile</button></Link>
-
-                    <div className="div1">
+              <div className="div1">
                 <div className="container">
                     <h2>Login Form</h2>
                     <form>
@@ -35,13 +29,7 @@ function Profile() {
                     </form>
                 </div>
             </div>
-   
-   
-
-    
-  
+       
     </div>
   )
 }
-
-export default Profile

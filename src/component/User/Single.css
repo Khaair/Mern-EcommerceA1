@@ -11,6 +11,13 @@
     grid-column: 1/6;
 }
 
+.stranding{
+  
+  
+  grid-column: 1/-1;
+
+}
+
 .stwo{
    
   
@@ -20,8 +27,17 @@
 
 .sthree{
    
-  
+    display: block;
     grid-column: 1/-1;
+}
+
+.cmnt{
+padding-left: 40px;
+margin-top: 80px;
+}
+
+.cmntinput{
+  height: 100px;
 }
 
 .sfour{

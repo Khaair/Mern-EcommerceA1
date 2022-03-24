@@ -15,6 +15,8 @@ import Checkout from './Checkout';
 import Payment from './Payment';
 import Order from './Order';
 import OrderTracking from './OrderTracking';
+import UserProfile from './UserProfile';
+import Login from './Login';
 
 
 
@@ -43,6 +45,9 @@ function User() {
         <Route  path="/payment" element={<Payment />} />
         <Route  path="/order" element={<Order />} />
         <Route  path="/ordertracking" element={<OrderTracking />} />
+        <Route  path="/userprofile" element={<UserProfile />} />
+        <Route  path="/login" element={<Login />} />
+
        </Routes> 
     
      

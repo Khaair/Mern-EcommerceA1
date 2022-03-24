@@ -10,73 +10,78 @@ export default function UserManage() {
                 <h2>User Manage</h2>
                 <table>
                     <tbody><tr>
-                        <th>SL</th>
-                        <th>Order ID</th>
+                        <th>ID</th>
+                        <th>User Name</th>
+                        <th>Email</th>
                         <th>Status</th>
-                        <th>Date/Time</th>
-                        <th>Invoices</th>
-                        <th>Order Details</th>
+                        <th>Transaction</th>
+                        <th>Action</th>
 
                     </tr>
                         <tr>
                             <td>Peter</td>
                             <td>Griffin</td>
-                            <td><button>Order</button></td>
+                            <td>loop</td>
                             <td>$100</td>
-                            <td><button>Order</button></td>
-                            <Link to="/ordertracking"><td><button>Check</button></td></Link>
+                            <td>kk</td>
+
+                            <td>
+                            <Link to="/edituserprofile"><td><button>Edit</button></td></Link>
+                            <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+                            </td>
+                            
+                            
                         </tr>
                         <tr>
-                            <td>Lois</td>
+                        <td>Peter</td>
                             <td>Griffin</td>
+                            <td>loop</td>
+                            <td>$100</td>
+                            <td>kk</td>
 
-                            <td><button>Order</button></td>
-                            <td>$100</td>
-                            <td><button>Order</button></td>
-                            <td><button>Order</button></td>
+                            <td>
+                            <Link to="/edituserprofile"><td><button>Edit</button></td></Link>
+                            <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+                            </td>
                         </tr>
                         <tr>
-                            <td>Joe</td>
-                            <td>Swanson</td>
-                            <td>$300</td>
-                            <td>$100</td>
-                            <td>$100</td>
-                            <td>$100</td>
-                        </tr>
-                        <tr>
-                            <td>Cleveland</td>
-                            <td>Brown</td>
-                            <td>$250</td>
-                            <td>$100</td>
-                            <td>$100</td>
-                            <td>$100</td>
-                        </tr>
-
-                        <tr>
-                            <td>Lois</td>
+                        <td>Peter</td>
                             <td>Griffin</td>
+                            <td>loop</td>
+                            <td>$100</td>
+                            <td>kk</td>
 
-                            <td><button>Order</button></td>
-                            <td>$100</td>
-                            <td><button>Order</button></td>
-                            <td><button>Order</button></td>
+                            <td>
+                            <Link to="/edituserprofile"><td><button>Edit</button></td></Link>
+                            <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+                            </td>
                         </tr>
                         <tr>
-                            <td>Joe</td>
-                            <td>Swanson</td>
-                            <td>$300</td>
+                        <td>Peter</td>
+                            <td>Griffin</td>
+                            <td>loop</td>
                             <td>$100</td>
-                            <td>$100</td>
-                            <td>$100</td>
+                            <td>kk</td>
+
+                            <td>
+                            <Link to="/edituserprofile"><td><button>Edit</button></td></Link>
+                            <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+                            </td>
                         </tr>
+
                         <tr>
-                            <td>Cleveland</td>
-                            <td>Brown</td>
-                            <td>$250</td>
+                        <td>Peter</td>
+                            <td>Griffin</td>
+                            <td>loop</td>
                             <td>$100</td>
-                            <td>$100</td>
-                            <td>$100</td>
+                            <td>kk</td>
+
+                            <td>
+                            <Link to="/edituserprofile"><td><button>Edit</button></td></Link>
+                            <i className="fa fa-trash-o" style={{fontSize: '30px', color: 'red'}} />
+                            </td>
                         </tr>
+                    
                     </tbody></table>
             </div>
         </div>

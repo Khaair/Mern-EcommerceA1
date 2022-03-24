@@ -1,10 +1,16 @@
 import React from 'react'
 import './Register.css'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
     <div>
+
+<Link to="/login"><button>Login</button></Link>
+      <Link to="/register"><button>Register</button></Link>
+    
+      <Link to="/userprofile"><button>My Profile</button></Link>
+
        <div className="div1">
   <div className="containerss">
     <h2>Registration Form</h2>

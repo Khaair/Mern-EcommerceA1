@@ -42,7 +42,10 @@
   .cardd{
     display: flex;
   }
-  
+  .marr{
+    margin: 20px;
+    color: #CA3824;
+  }
   
   .five{
    grid-column: 1/-1;

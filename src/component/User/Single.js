@@ -5,6 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 import MyGallery from './MyGallery'
 import './Single.css'
+import PCard from './PCard';
 
 export default function Single() {
   return (
@@ -38,21 +39,10 @@ export default function Single() {
 
               <button className='sbtnn'>Add to Cart</button>
 
-              <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Dropdown Button
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
 
 
 
-             
+
 
 
             </div>
@@ -62,12 +52,29 @@ export default function Single() {
 
         </div>
         <div className='sthree'>
+         
+          <div className='cmnt'>
           <h1>Comment Section</h1>
+          <input className='cmntinput'></input>
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <button style={{marginTop:"40px"}}>Comment</button>
+          </div>
+        
         </div>
+
+        <div className='stranding'>
+          <h1 className='marr'>Tranding Product</h1>
+
+          <div className='cardd'>
+            <PCard />
+            <PCard />
+            <PCard />
+            <PCard />
+          </div>
+        </div>
+
+
+
         <div className='sfour'>
           <Footer />
         </div>

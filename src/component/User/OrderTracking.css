@@ -1,0 +1,67 @@
+.otcontainer{
+    
+    height: 500px;
+    margin: 30px;
+    
+    background-color: #F2F2F2;
+   
+    box-shadow: 5px black;
+    border-radius: 20px;
+    border: 1px solid gray;
+
+    }
+.otouteroneimg{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+
+.otouteroneimgdiv{
+    border: 2px solid gray;
+    width: 106px;
+    height: 108px;
+}
+
+    .otinnercontainer{
+    display: flex;
+
+    height: 150px;
+    margin: 30px;
+    
+    background-color: #F2F2F2;
+   
+    box-shadow: 5px black;
+    border-radius: 10px;
+    border: 1px solid gray;
+   
+
+    }
+
+    .otone{
+    margin-left: 150px;
+    margin-top: 10px;
+    }
+
+    .otonenn{
+        margin-right: 257px;
+    }
+
+    .otoutercon{
+        display: flex;
+    }
+
+    .otouterone{
+        margin-left: 80px;
+        display: flex;
+    }
+
+    .hrr{
+       padding-left: 30px;
+       
+       
+    }
+
+    .llg{
+        margin-left: 10px;
+    }
