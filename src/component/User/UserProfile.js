@@ -1,14 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import ProfileNav from './ProfileNav';
 
 import './UserProfile.css'
 export default function UserProfile() {
   return (
     <div>
-      <Link to="/login"><button>Login</button></Link>
-      <Link to="/register"><button>Register</button></Link>
-
-      <Link to="/userprofile"><button>My Profile</button></Link>
+     <ProfileNav/>
       <div className="profileContainer">
         <div className="pone">
           <img className='imgg' src='img/man.jpg' alt='hhh' />

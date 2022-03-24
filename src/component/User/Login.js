@@ -1,15 +1,13 @@
 import React from 'react'
 
 import { Link } from "react-router-dom";
+import ProfileNav from './ProfileNav';
 
 
 export default function Login() {
   return (
     <div>
-      <Link to="/login"><button>Login</button></Link>
-      <Link to="/register"><button>Register</button></Link>
-    
-      <Link to="/userprofile"><button>My Profile</button></Link>
+    <ProfileNav/>
               <div className="div1">
                 <div className="container">
                     <h2>Login Form</h2>
@@ -22,7 +20,7 @@ export default function Login() {
                         <br />
                         <input className="text" type="password" name placeholder="Enter Password" />
 
-                        <Link to="/deshboard"><button className="btnn">SUBMIT</button></Link>
+                        <Link to="/deshboard"><button className="btnn">Login</button></Link>
 
 
 

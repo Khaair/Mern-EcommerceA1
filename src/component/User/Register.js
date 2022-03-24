@@ -1,15 +1,12 @@
 import React from 'react'
 import './Register.css'
 import { Link } from "react-router-dom";
+import ProfileNav from './ProfileNav';
 
 export default function Register() {
   return (
     <div>
-
-<Link to="/login"><button>Login</button></Link>
-      <Link to="/register"><button>Register</button></Link>
-    
-      <Link to="/userprofile"><button>My Profile</button></Link>
+      <ProfileNav/>
 
        <div className="div1">
   <div className="containerss">

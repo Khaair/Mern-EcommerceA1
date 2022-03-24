@@ -2,7 +2,8 @@ import React from 'react'
 import './Profile.css'
 
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";       
+import ProfileNav from './ProfileNav';
 
 
 
@@ -11,11 +12,8 @@ import { Link } from "react-router-dom";
 function Profile() {
   return (
     <div>
-      <Link to="/login"><button>Login</button></Link>
-      <Link to="/register"><button>Register</button></Link>
-    
-      <Link to="/userprofile"><button>My Profile</button></Link>
-
+  
+<ProfileNav/>
                     <div className="div1">
                 <div className="container">
                     <h2>Login Form</h2>
