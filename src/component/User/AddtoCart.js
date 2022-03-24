@@ -8,46 +8,42 @@ export default function AddtoCart() {
 
             <div className="div1">
 
-                <div className="wcontainer">
+                <div className="Addcontainer">
                     <div className='titlee'>
                         <h2>My Cart</h2>
+                       <Link to="/"><button className='addbtnn'>Continue Shoping</button></Link> 
                     </div>
-                    <div className="profileContainer">
 
-                        <div className="pone">
-                            <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
+                    <div className='addtocartone'>
+                        <img className='addtocartimg' src='img/p1.jpg'alt='loo'/>
+                        <div className='adddetails'>
+                        <h3>Title</h3>
+                        <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
                         </div>
-                        <div className="ptwo">
-                            <h5>Product Name: Product 01</h5>
-                            <p className='peraaddtocart'>Discover 159 free Registered Logo png images with transparent backgrounds.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                            </p>
-                        </div>
+                        
                     </div>
+                  
 
                     <hr></hr>
 
-                    <div className="profileContainer"> 
 
-                        <div className="pone">
-                            <img className='imgg' src='img/laptopp.jpg' alt='hhh' />
+                    <div className='addtocartone'>
+                        <img className='addtocartimg' src='img/p1.jpg'alt='loo'/>
+                        <div className='adddetails'>
+                        <h3>Title</h3>
+                        <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
                         </div>
-                        <div className="ptwo">
-                            <h5>Product Name: Product 01</h5>
-                            <p className='peraaddtocart' >Discover 159 free Registered Logo png images with transparent backgrounds.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                            </p>
-                        </div>
+                        
                     </div>
+
+                  
                     <hr></hr>
                     <div>
                     <input className="text" type="text" name placeholder="Cupon Code" />
                     
                        <div className='llk'>
                        <button  className='cuponbtn' >Submit</button> 
-                        <Link to="/checkout"><button className='checkoutbtn'>Check Out</button></Link> 
+                        <Link to="/checkout"><button className='checkoutbtnn'>Check Out</button></Link> 
                        </div>
 
                     </div>

@@ -6,8 +6,9 @@ export default function AdminLogin() {
   return (
     <div>
         <div className="div1">
-                <div className="container">
+                <div className="adcontainer">
                     <h2>Admin Login Form</h2>
+                    <hr></hr>
                     <form>
                         <label className="name">Email</label>
                         <br />
@@ -17,7 +18,7 @@ export default function AdminLogin() {
                         <br />
                         <input className="text" type="password" name placeholder="Enter Password" />
 
-                        <Link to="/deshboard"><button className="btnn">SUBMIT</button></Link>
+                        <Link to="/deshboard"><button className="btnn">Log in</button></Link>
 
 
 

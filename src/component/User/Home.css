@@ -1,8 +1,11 @@
+
+
 .containers{
     height: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 0px auto auto auto;
+    background-color: #F1E1E4;
     
   }
 

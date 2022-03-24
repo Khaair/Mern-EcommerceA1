@@ -14,11 +14,29 @@
  display: flex;
 }
 
+.logolink{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.logolink:hover{
+  color: aliceblue;
+}
+
 .inp{
-  border-radius: 10px;
+
  height: 50px;
  width: 300px;
  margin-top: 14px;
+ border: 1px solid black;
+ padding-left: 20px;
+}
+
+.inpsearch{
+  width: 50px;
+  height: 50px;
+  margin-top: 14px;
+  border: 1px solid black;
 }
 
 .logo{

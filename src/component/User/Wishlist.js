@@ -1,5 +1,7 @@
 import React from 'react'
 import './Wishlist.css'
+import { Link } from "react-router-dom";
+
 
 export default function Wishlist() {
     return (
@@ -7,39 +9,39 @@ export default function Wishlist() {
 
             <div className="div1">
 
-                <div className="wcontainer">
+                <div className="Addcontainer">
                     <div className='titlee'>
                         <h2>My Wish List</h2>
+                        <Link to="/"><button className='wishbtnn'>Continue Shoping</button></Link>
                     </div>
-                    <div className="profileContainer">
 
-                        <div className="pone">
-                            <img className='imgg' src='img/l3.jpg' alt='hhh' />
+                    <div className='addtocartone'>
+                        <img className='addtocartimg' src='img/p1.jpg' alt='loo' />
+                        <div className='adddetails'>
+                            <h3>Title</h3>
+                            <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
                         </div>
-                        <div className="ptwo">
-                            <h3>Product Name: Product 01</h3>
-                            <h6 >Discover 159 free Registered Logo png images with transparent backgrounds.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                            </h6>
-                        </div>
+
                     </div>
+
 
                     <hr></hr>
 
-                    <div className="profileContainer">
 
-                        <div className="pone">
-                            <img className='imgg' src='img/l3.jpg' alt='hhh' />
+                    <div className='addtocartone'>
+                        <img className='addtocartimg' src='img/p1.jpg' alt='loo' />
+                        <div className='adddetails'>
+                            <h3>Title</h3>
+                            <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
                         </div>
-                        <div className="ptwo">
-                            <h3>Product Name: Product 01</h3>
-                            <h6 >Discover 159 free Registered Logo png images with transparent backgrounds.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                                Search more hd transparent Registered Logo image on KindPNG.
-                            </h6>
-                        </div>
+
                     </div>
+
+
+                    <hr></hr>
+
+
+
                 </div>
             </div>
         </div>

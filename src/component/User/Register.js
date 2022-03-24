@@ -9,29 +9,24 @@ export default function Register() {
       <ProfileNav/>
 
        <div className="div1">
-  <div className="containerss">
+  <div className="rcontainerss">
     <h2>Registration Form</h2>
+    <hr></hr>
     <form>
-      <label className="name">First Name</label>
+      <label className="name">Name</label>
       <br />
       <input className="text" type="text" name placeholder="First Name" />
       <br />
-      <label className="name">Last Name</label>
+      <label className="name">Email</label>
       <br />
-      <input className="text" type="text" name placeholder="Last Name" />
+      <input className="text" type="email" name placeholder="Last Name" />
       <br />
-      <label className="name">Father Name</label>
+      <label className="name">Mobile Number</label>
       <br />
-      <input className="text" type="text" name placeholder="Father Name" />
+      <input className="text" type="number" name placeholder="Father Name" />
       <br />
-      <label className="name">Country</label>
-      <br />
-      <select className="text">
-        <option>USA</option>
-        <option>Canada</option>
-        <option>Bangladesh</option>
-      </select>
-      <br />
+     
+     
       <div>
         <label className="name">Select Gender</label>
         <br />
@@ -42,7 +37,7 @@ export default function Register() {
         <input type="radio" id="other" name="gender" defaultValue="other" />
         <label htmlFor="other">Other</label>
       </div>
-      <button className="btn">SUBMIT</button>
+      <button className="regbtn">SIGN UP</button>
       <p>Already have an account?Sign In</p>
 
       

@@ -1,20 +1,37 @@
 
-  *{
-    margin: 0px;
-    padding: 0px;
-   
+.addtocartimg{
+  height: 100px;
+  width: 150px;
+}
 
-    }
+.adddetails{
+  margin-left: 40px;
+}
 
+.addtocartone{
+  margin-top: 40px;
+
+  display: flex;
+
+}
+
+.addbtnn{
+  margin-left: 350px;
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  background-color: orange;
+  border: 1px solid whitesmoke;
+}
 .div1{
     display: flex;
     justify-content: center;
     margin-top: 50px;
     }
-.wcontainer{
+.Addcontainer{
     
     
-    width: auto;
+    width: 800px;
     margin: 30px;
     height: auto;
     background-color: #F2F2F2;
@@ -39,22 +56,6 @@
         text-align: center;
     }
 
-
-  
-      
-      /* .pone{
-       
-      
-        grid-column: 1/3;
-      }
-      
-      
-      .ptwo{
-       
-        
-        
-        grid-column: 3/-1;
-      } */
       
     
       .imgg{
@@ -68,6 +69,7 @@
           margin-top: 15px;
           padding-left: 30px;
           color: aliceblue;
+          display: flex;
       }
 
       .titlee h2{
@@ -77,22 +79,24 @@
 
       .cuponbtn{
           margin-top: 10px;
+          
        
         background-color: green;
-        border: 1px solid green;
-        border-radius: 10px;
-        height: 50px;
+        border: 1px solid black;
+        border-radius: 7px;
+        height: 40px;
         width: 100px;
     }
 
-      .checkoutbtn{
+      .checkoutbtnn{
          margin-top: 10px;
-          margin-left: 800px;
+         margin-left: 420px;
+          
           background-color: green;
-          border: 1px solid green;
-          border-radius: 10px;
-          height: 50px;
-          width: 200px;
+          border: 1px solid black;
+          border-radius: 7px;
+          height: 40px;
+          width: 100px;
       }
 
       .llk{

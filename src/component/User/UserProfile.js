@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import ProfileNav from './ProfileNav';
 
 import './UserProfile.css'
@@ -9,7 +8,10 @@ export default function UserProfile() {
      <ProfileNav/>
       <div className="profileContainer">
         <div className="pone">
-          <img className='imgg' src='img/man.jpg' alt='hhh' />
+         
+          <img   className='imgg ootouteroneimgdiv' src='img/man.jpg' alt='hhh' />
+          
+         
         </div>
         <div className="ptwo">
           <h6>ID: 23456789</h6>

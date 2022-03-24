@@ -41,7 +41,7 @@ function Home() {
                 <img src="img/p2.jpg" style={{ width: '950px', height: '400px' }} className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <img src="img/p3.png" style={{ width: '950px', height: '400px' }} className="d-block w-100" alt="..." />
+                <img src="img/p3.jpg" style={{ width: '950px', height: '400px' }} className="d-block w-100" alt="..." />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

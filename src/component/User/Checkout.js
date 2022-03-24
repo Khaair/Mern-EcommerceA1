@@ -7,6 +7,7 @@ export default function Checkout() {
             <div className="div1">
                 <div className="ccontainerss">
                     <h2>Billing Address</h2>
+                    <hr></hr>
                     <form>
                         <label className="name">First Name</label>
                         <br />
@@ -57,7 +58,7 @@ export default function Checkout() {
                             
                             <label htmlFor="other">Other</label>
                         </div>
-                        <Link to="/payment"><button className="btn">Place Order</button></Link>
+                        <Link to="/payment"><button className="checkoutbtn">Place Order</button></Link>
                     </form></div></div>
 
         </div>

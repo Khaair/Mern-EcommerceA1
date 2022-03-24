@@ -19,11 +19,11 @@
      
   
 }
-.containerss{
+.rcontainerss{
     
     
     width: 530px;
-    height: 610px;
+  
     background-color: #F2F2F2;
     padding: 30px;
     box-shadow: 1px 2px 4px  black;
@@ -49,9 +49,9 @@
 .text:hover{
     background-color: #90EE90;
 }
-.btn{
+.regbtn{
     background-color: green;
-    width: 430px;
+    width: 230px;
     height: 50px;
     margin-top: 30px;
     border-radius: 4px;
