@@ -10,7 +10,7 @@ export default function Register() {
 
        <div className="div1">
   <div className="rcontainerss">
-    <h2>Registration Form</h2>
+    <h5>Registration Form</h5>
     <hr></hr>
     <form>
       <label className="name">Name</label>
@@ -38,7 +38,7 @@ export default function Register() {
         <label htmlFor="other">Other</label>
       </div>
       <button className="regbtn">SIGN UP</button>
-      <p>Already have an account?Sign In</p>
+      <p>Already have an account?<Link to="/profile">Sign In</Link></p>
 
       
     </form></div></div>

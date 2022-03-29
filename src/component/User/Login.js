@@ -13,7 +13,7 @@ export default function Login() {
       <div className="div1">
         
           <div className="lcontainer">
-            <h2>Login Form</h2>
+            <h5>Login Form</h5>
             <hr></hr>
             <form>
               <label className="name">Email</label>
@@ -23,6 +23,7 @@ export default function Login() {
               <label className="name">Password</label>
               <br />
               <input className="text" type="password" name placeholder="Enter Password" />
+              <br></br>
 
               <Link to="/deshboard"><button className="lbtnn">Log in</button></Link>
             </form>

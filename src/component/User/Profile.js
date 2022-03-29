@@ -20,6 +20,7 @@ function Profile() {
             <label className="name">Password</label>
             <br />
             <input className="text" type="password" name placeholder="Enter Password" />
+            <br></br>
 
             <Link to="/deshboard"><button className="lbtnn">Log in</button></Link>
           </form>

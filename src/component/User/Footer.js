@@ -65,6 +65,11 @@ function Footer() {
 
 
         </div>
+
+        <div className='fsix'>
+          <p>Copyright © 2021 Dhamaka, a concern of Invariant Telecom Bangladesh Ltd.</p>
+
+        </div>
       </div>
     </div>
   )

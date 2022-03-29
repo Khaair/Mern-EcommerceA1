@@ -5,11 +5,13 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     color: aliceblue;
+    background-color: black;
    
   }
 
   .fone{
    grid-column: 1/3;
+   background-color: black;
   }
 
   .ftwo{
@@ -27,6 +29,14 @@
   .ffive{
    grid-column: 10/-1;
   }
+
+
+  .fsix{
+    grid-column: 1/-1;
+    margin-top: 80px;
+    background-color: black;
+   
+   }
 
   ul{
       display:grid;
