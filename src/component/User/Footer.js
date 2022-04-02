@@ -19,11 +19,11 @@ function Footer() {
 
         <div className='ftwo'>
           <ul>
-            <a href><li> About</li></a>
-            <a href><li> We are hiring!</li></a>
-            <a href><li> Terms &amp; Conditions</li></a>
+            <a href><li>Contact Us</li></a>
+            <a href><li>CUSTOMER SERVICE</li></a>
+            <a href><li>Shipping & Replacement</li></a>
             <a href><li> Privacy Policy</li></a>
-            <a href><li> Terms &amp; Conditions</li></a>
+            <a href><li> Terms of Use</li></a>
           </ul>
         </div>
 
@@ -67,7 +67,7 @@ function Footer() {
         </div>
 
         <div className='fsix'>
-          <p>Copyright © 2021 Dhamaka, a concern of Invariant Telecom Bangladesh Ltd.</p>
+          <p>Copyright © 2021 BD ECom, a concern of Invariant Telecom Bangladesh Ltd.</p>
 
         </div>
       </div>

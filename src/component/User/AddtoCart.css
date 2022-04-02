@@ -82,7 +82,7 @@
           
        
         background-color: green;
-        border: 1px solid black;
+        
         border-radius: 7px;
         height: 40px;
         width: 100px;
@@ -90,10 +90,10 @@
 
       .checkoutbtnn{
          margin-top: 10px;
-         margin-left: 420px;
-          
+         margin-left: 510px;
+          border: none;
           background-color: green;
-          border: 1px solid black;
+         
           border-radius: 7px;
           height: 40px;
           width: 100px;

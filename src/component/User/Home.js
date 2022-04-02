@@ -60,34 +60,37 @@ function Home() {
 
           <div className='cardd'>
             <Link className='llnk' to="/single"><PCard /></Link>
-            <PCard />
-            <PCard />
-            <PCard />
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
           </div>
 
           <div className='cardd'>
-            <PCard />
-            <PCard />
-            <PCard />
-            <PCard />
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            
+            
+            
           </div>
 
           <h3 className='marr'>NEW ARRIVALS</h3>
 
           <div className='cardd'>
-            <PCard />
-            <PCard />
-            <PCard />
-            <PCard />
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
           </div>
 
           <h3 className='marr'>Laptop & Computer</h3>
 
           <div className='cardd'>
-            <PCard />
-            <PCard />
-            <PCard />
-            <PCard />
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
+            <Link className='llnk' to="/single"><PCard /></Link>
           </div>
 
 

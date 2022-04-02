@@ -19,15 +19,10 @@ import UserProfile from './UserProfile';
 import Login from './Login';
 
 
-
-
-
-
-
 function User() {
   return (
     <div>
-     
+    
       <Navbar/>
         <Routes>
         <Route path="/" element={<Home/>} />
