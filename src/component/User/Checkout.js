@@ -25,11 +25,6 @@ export default function Checkout() {
                         <input className="text" type="text" name placeholder="Address" />
                         <br />
 
-                        <label className="name">Division</label>
-                        <br />
-                        <input className="text" type="text" name placeholder="Division" />
-
-                        <br />
                         <label className="name">Zip</label>
                         <br />
                         <input className="text" type="text" name placeholder="Zip" />
@@ -58,7 +53,7 @@ export default function Checkout() {
                             
                             <label htmlFor="other">Other</label>
                         </div>
-                        <Link to="/payment"><button className="checkoutbtn">Place Order</button></Link>
+                        <Link to="/payment"><button className="placebutton">Place Order</button></Link>
                     </form></div></div>
 
         </div>

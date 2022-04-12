@@ -19,37 +19,36 @@ export default function Order() {
 
           </tr>
             <tr>
-              <td>Peter</td>
-              <td>Griffin</td>
+              <td>01</td>
+              <td>56474</td>
               <td><button>Order</button></td>
-              <td>$100</td>
+              <td>20.04.2022</td>
               <td><button>Order</button></td>
               <Link to="/ordertracking"><td><button>Check</button></td></Link>
             </tr>
             <tr>
-              <td>Lois</td>
-              <td>Griffin</td>
-
+              <td>02</td>
+              <td>44899</td>
+              <td><button>Pending</button></td>
+              <td>06.05.2022</td>
               <td><button>Order</button></td>
-              <td>$100</td>
-              <td><button>Order</button></td>
-              <td><button>Order</button></td>
+              <Link to="/ordertracking"><td><button>Check</button></td></Link>
             </tr>
             <tr>
-              <td>Joe</td>
-              <td>Swanson</td>
-              <td>$300</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
+              <td>03</td>
+              <td>40043</td>
+              <td><button>Order</button></td>
+              <td>20.04.2022</td>
+              <td><button>Order</button></td>
+              <Link to="/ordertracking"><td><button>Check</button></td></Link>
             </tr>
             <tr>
-              <td>Cleveland</td>
-              <td>Brown</td>
-              <td>$250</td>
-              <td>$100</td>
-              <td>$100</td>
-              <td>$100</td>
+              <td>04</td>
+              <td>39847</td>
+              <td><button>Order</button></td>
+              <td>06.05.2022</td>
+              <td><button>Order</button></td>
+              <Link to="/ordertracking"><td><button>Check</button></td></Link>
             </tr>
           </tbody></table>
       </div>

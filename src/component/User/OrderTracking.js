@@ -12,8 +12,8 @@ export default function OrderTracking() {
           <div className='otone'>
             <h3>Estimated Delibary Time:</h3>
             <div className='otonenn'>
-            <p>killlllllllll</p>
-            <p>killlllllllll</p>
+            <p>Text</p>
+            <p>Text</p>
             </div>
           
           </div>
@@ -21,8 +21,8 @@ export default function OrderTracking() {
           <div className='otone'>
             <h3>Delibary Time:</h3>
             <div className='otonenn'>
-            <p>killlllllllll</p>
-            <p>killlllllllll</p>
+            <p>Text</p>
+            <p>Text</p>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function OrderTracking() {
             <div className='llg'>
             <h3>Title</h3>
             
-            <p>kiooooooooo</p>
+            <p>Text</p>
             </div>
            
           </div>
@@ -61,7 +61,7 @@ export default function OrderTracking() {
           <div className='llg'>
             <h3>Title</h3>
             
-            <p>kiooooooooo</p>
+            <p>Text</p>
             </div>
 
 
