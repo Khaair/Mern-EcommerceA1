@@ -18,7 +18,7 @@ function Navbar() {
             </button>
           </div>
           <li> <Link className='lnk' to="/">Home</Link> </li>
-          <li> <Link className='lnk' to="/about">Electronics</Link> </li>
+          <li> <Link className='lnk' to="/about">Top Sell</Link> </li>
           <li> <Link className='lnk' to="/contact">Offers</Link> </li>
           <li> <Link className='lnk' to="/addtocart"><img style={{ height: '40px' }} src='img/addtocart.png' alt='kii' /></Link> </li>
           <li> <Link className='lnk' to="/wishlist"><img style={{ height: '40px' }} src='img/wishlistt.png' alt='kii' /></Link> </li>
