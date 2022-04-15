@@ -27,6 +27,7 @@ import EditProduct from './component/Admin/EditProduct';
 import EditOrder from './component/Admin/EditOrder';
 import UserProfile from './component/User/UserProfile';
 import Login from './component/User/Login';
+import AdminRegister from './component/Admin/AdminRegister'
 
 
 
@@ -34,6 +35,8 @@ import Login from './component/User/Login';
 
 function App() {
   return (
+    
+   
 
     <BrowserRouter>
 
@@ -67,6 +70,10 @@ function App() {
         <Route path="edituserprofile" element={<EditUserProfile />} />
         <Route path="editproduct" element={<EditProduct />} />
         <Route path="editorder" element={<EditOrder />} />
+        <Route path="adminregister" element={<AdminRegister />} />
+
+        
+
 
 
 

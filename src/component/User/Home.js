@@ -1,15 +1,43 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
+import axios from "axios";
+
 import Footer from './Footer';
 import './Home.css'
 import PCard from './PCard';
 import { Link } from "react-router-dom";
+// import CounterTwo from './CounterTwo';
 
 
 function Home() {
+
+  const [product, setProduct] = useState([]);
+
+  // console.log(product)
+
+
+  useEffect(async() => {
+    await axios.post(`http://localhost:5000/api/product/getProducts`, {
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'auth': localStorage.getItem('auth')
+      }
+  }).then(res=>{
+    // console.log(res.data.products)
+
+     setProduct(res.data.products)
+
+    // this.setState({profile:res.data})
+  }).catch(err=>{
+    console.log(err)
+  })
+  },[]);
   return (
     <div>
+        {/* <CounterTwo/> */}
       <div className="containers">
         <div className="one">
+        
         </div>
         <div className="two">
           <ul className="list-group">
@@ -58,50 +86,17 @@ function Home() {
           <h3 className='marr'>Feature Product</h3>
 
 
-          <div className='cardd'>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-          </div>
 
           <div className='cardd'>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            
-            
+                  
+               {product.map((item,ind)=><Link className='llnk' to="/single"> <PCard  key = {ind} number = {item.skunumber} titleText={item.price} descText = {item.quantity}/></Link>)}
+
             
           </div>
-
-          <h3 className='marr'>NEW ARRIVALS</h3>
-
-          <div className='cardd'>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
           </div>
+         
 
-          <h3 className='marr'>Laptop & Computer</h3>
-
-          <div className='cardd'>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-            <Link className='llnk' to="/single"><PCard /></Link>
-          </div>
-
-
-
-
-
-
-
-
-
-        </div>
+         
         <div className="five">
           <Footer />
 

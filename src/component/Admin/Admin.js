@@ -1,14 +1,10 @@
 import React from 'react';
 import './Admin.css'
-
-
-
-
-
 import AdminLogin from './AdminLogin';
 
 
-
+//Admin UserNAme : khaaair
+//Admin Password : Khair12345
 
 
 

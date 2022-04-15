@@ -1,36 +1,76 @@
-import React from 'react'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-import { Link } from "react-router-dom";
-import ProfileNav from './ProfileNav';
-import './Login.css'
+import ProfileNav from "./ProfileNav"
+
+
+ function Login(props) {
+   
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const navigate = useNavigate();
+
+  const sendDatatoApp = async () => {
+    let x;
+    try {
+      x = await axios.post('http://localhost:5000/api/users/login-user', { username, password })
+      console.log(x.data, 'success')
+      localStorage.setItem('auth',x.data.token);
+      localStorage.setItem('userrole',x.data.role);
+      localStorage.setItem('username',x.data.username);
+     
+    }
+    
+    
+    
+    catch (er) {
+      console.log(er)
+    }
+
+    if (x.data.success) {
+      navigate('/')
+    }
+    else {
+      alert('Registraion faild')
+      navigate('/register')
+    }
+
+  }
 
 
 
-export default function Login() {
-  return (
-    <div>
-      <ProfileNav />
-      <div className="div1">
-        
-          <div className="lcontainer">
-            <h5>Login Form</h5>
-            <hr></hr>
-            <form>
-              <label className="name">Email</label>
-              <br />
-              <input className="text" type="text" name placeholder="Enter Email" />
-              <br />
-              <label className="name">Password</label>
-              <br />
-              <input className="text" type="password" name placeholder="Enter Password" />
-              <br></br>
 
-              <Link to="/deshboard"><button className="lbtnn">Log in</button></Link>
-            </form>
-          </div>
-        </div>
-      </div>
+
 
   
+  return(
+  <>
+  
+
+  {/* <ProfileNav/> */}
+
+<div className='container'>
+    <form action="">
+    <div className="form-group mt-5 ">
+    <label htmlFor="">Enter User Name</label>
+    <input className="form-control" value={username} onChange={(e)=>setUsername(e.target.value)} style={{margin:"12px"}} placeholder="Enter title"/>
+    </div>
+    <div className="form-group mt-5 ">
+    <label htmlFor="">Enter Password</label>
+        <input className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)}  style={{margin:"12px"}} placeholder="Enter author"/>
+        </div>
+ 
+        <button className="btn btn-primary mt-3" type="button" onClick={sendDatatoApp} >Login</button>
+    </form>
+
+    </div>
+  </>
+    
+
   )
 }
+
+export default Login

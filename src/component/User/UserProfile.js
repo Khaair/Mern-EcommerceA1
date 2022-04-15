@@ -1,8 +1,35 @@
-import React from 'react'
+import axios from 'axios';
+import React,{useEffect,useState} from 'react'
 import ProfileNav from './ProfileNav';
 
 import './UserProfile.css'
 export default function UserProfile() {
+
+  const [user, setUser] = useState([]);
+  
+  // console.log(product)
+
+
+  useEffect(async() => {
+    await axios.get(`http://localhost:5000/api/users/profile`, {
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'auth': localStorage.getItem('auth')
+      }
+  }).then(res=>{
+    setUser(res.data[0].fullname)
+    console.log(res.data[0].fullname)
+
+    //  setProduct(res.data.products)
+
+    // this.setState({profile:res.data})
+  }).catch(err=>{
+    console.log(err)
+  })
+  })
+
+
   return (
     <div>
      <ProfileNav/>
@@ -15,7 +42,7 @@ export default function UserProfile() {
         </div>
         <div className="ptwo">
           <h6>ID: 23456789</h6>
-          <h6>User Name: Khair</h6>
+          <h6>User Name: {user}</h6>
 
 
           <h6>Email: khair.cse.iu@gmai.com</h6>

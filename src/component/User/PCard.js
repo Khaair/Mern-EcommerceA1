@@ -1,15 +1,17 @@
 import React from 'react'
 import './PCard.css'
 
-function PCard() {
+function PCard(props) {
   return (
-    <div>
-    <div className="card">
+    <div> 
+      <div>
+    <div className="cardd">
             <img className='imagee' src="img/p1.jpg" alt="Denim Jeans" />
-            <h5>Tailored Jeans</h5>
-            <p className="price">$19.99</p>
-            <p>Some text about the jeans. </p>
+            <h5>SKU NUMBER: {props.number} </h5>
+            <p className="price">{props.titleText}</p>
+            <p>Quantity: {props.descText} </p>
             <p><button>Add to Cart</button></p>
+          </div>
           </div>
     </div>
   )
