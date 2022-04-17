@@ -1,11 +1,9 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "axios";
-
 import Footer from './Footer';
 import './Home.css'
 import PCard from './PCard';
-import { Link } from "react-router-dom";
-// import CounterTwo from './CounterTwo';
+
 
 
 function Home() {
@@ -15,29 +13,29 @@ function Home() {
   // console.log(product)
 
 
-  useEffect(async() => {
+  useEffect(async () => {
     await axios.post(`http://localhost:5000/api/product/getProducts`, {
       headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'auth': localStorage.getItem('auth')
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'auth': localStorage.getItem('auth')
       }
-  }).then(res=>{
-    // console.log(res.data.products)
+    }).then(res => {
+      // console.log(res.data.products)
 
-     setProduct(res.data.products)
+      setProduct(res.data.products)
 
-    // this.setState({profile:res.data})
-  }).catch(err=>{
-    console.log(err)
-  })
-  },[]);
+      // this.setState({profile:res.data})
+    }).catch(err => {
+      console.log(err)
+    })
+  }, []);
   return (
     <div>
-        {/* <CounterTwo/> */}
+      {/* <CounterTwo/> */}
       <div className="containers">
         <div className="one">
-        
+
         </div>
         <div className="two">
           <ul className="list-group">
@@ -82,21 +80,22 @@ function Home() {
             </button>
           </div>
         </div>
+
+
+
         <div className="four">
-          <h3 className='marr'>Feature Product</h3>
+          <div className="row" >
+            {product.map((item, ind) => {
+              return (
 
+                <PCard  key = {ind} skunumber={item.skunumber} price={item.price} idd = {item._id} />
+              )
+            })}
 
-
-          <div className='cardd'>
-                  
-               {product.map((item,ind)=><Link className='llnk' to="/single"> <PCard  key = {ind} number = {item.skunumber} titleText={item.price} descText = {item.quantity}/></Link>)}
-
-            
           </div>
-          </div>
-         
 
-         
+        </div>
+
         <div className="five">
           <Footer />
 
