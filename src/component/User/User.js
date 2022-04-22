@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Buy from './Buy'
 import { Route, Routes } from "react-router-dom";
 
@@ -20,12 +20,19 @@ import Login from './Login';
 
 
 function User() {
+  const [cdata,setC]=useState([]);
+  const cartSet=(data)=>{
+    console.log('asche',data)
+      setC(data);
+  }
+
+  console.log(cdata,"qqqqq")
   return (
     <div>
     
-      <Navbar/>
+      <Navbar cdata={cdata.length}/>
         <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home cartSet={cartSet}/>} />
         <Route path="/buy" element={<Buy/>} />
         <Route  path="/profile" element={<Profile />} />
         <Route  path="/about" element={<About />} />
@@ -41,7 +48,7 @@ function User() {
         <Route  path="/order" element={<Order />} />
         <Route  path="/ordertracking" element={<OrderTracking />} />
         <Route  path="/userprofile" element={<UserProfile />} />
-        <Route  path="/login" element={<Login />} />
+        <Route  path="/login" element={<Login cset={cartSet} />} />
 
        </Routes> 
     

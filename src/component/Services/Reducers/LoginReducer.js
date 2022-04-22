@@ -5,13 +5,13 @@ const initialstate = {
 }
 
 export default function(state = initialstate,action){
-
+console.log('looo')
     switch(action.type){
 
         case login:
             return{
                 ...state,
-                login: true
+                login: action.payload
             }
           
                 default: 

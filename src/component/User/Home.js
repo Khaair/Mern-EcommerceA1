@@ -6,11 +6,12 @@ import PCard from './PCard';
 
 
 
-function Home() {
+function Home(props) {
 
   const [product, setProduct] = useState([]);
 
   // console.log(product)
+
 
 
   useEffect(async () => {
@@ -88,7 +89,7 @@ function Home() {
             {product.map((item, ind) => {
               return (
 
-                <PCard  key = {ind} skunumber={item.skunumber} price={item.price} idd = {item._id} />
+                <PCard  key = {ind} skunumber={item.skunumber} price={item.price} idd = {item._id}  cartSet={props.cartSet}/>
               )
             })}
 

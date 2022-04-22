@@ -1,21 +1,20 @@
-
-.addtocartimg{
+.addtocartimg {
   height: 100px;
   width: 150px;
 }
 
-.adddetails{
+.adddetails {
   margin-left: 40px;
 }
 
-.addtocartone{
+.addtocartone {
   margin-top: 40px;
 
   display: flex;
 
 }
 
-.addbtnn{
+.addbtnn {
   margin-left: 350px;
   width: 200px;
   height: 40px;
@@ -23,83 +22,108 @@
   background-color: orange;
   border: 1px solid whitesmoke;
 }
-.div1{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    }
-.Addcontainer{
-    
-    
-    width: 800px;
-    margin: 30px;
-    height: auto;
-    background-color: #F2F2F2;
-    padding: 30px;
-    box-shadow: 5px black;
-    border-radius: 20px;
-    border: 1px solid gray;
 
-    }
+.div1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.Addcontainertop {
+  display: flex;
+}
+.uu{
+  display: flex;
+}
+
+.uutwo{
+  margin-top: 50px;
+  margin-left: 150px ;
+}
+
+.uubtn{
+  display: flex;
+}
+
+.uutwo button{
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  border-radius: 50%;
+}
+
+.Addcontainer {
+
+
+  width: 800px;
+  margin: 30px;
+  height: auto;
+  background-color: #F2F2F2;
+  padding: 30px;
+  box-shadow: 5px black;
+  border-radius: 20px;
+  border: 1px solid gray;
+
+}
 
 
 
-.peraaddtocart{
-    text-align: justify;
+.peraaddtocart {
+  text-align: justify;
 }
 
 
 
 
 
-    .wcenter{
-        text-align: center;
-    }
-
-      
-    
-      .imgg{
-        height: 200px;
-        width: 200px;
-        margin-left: 300px;
-      }
-
-      .titlee{
-          background-color: black;
-          margin-top: 15px;
-          padding-left: 30px;
-          color: aliceblue;
-          display: flex;
-      }
-
-      .titlee h2{
-          text-align: left;
-      }
+.wcenter {
+  text-align: center;
+}
 
 
-      .cuponbtn{
-          margin-top: 10px;
-          
-       
-        background-color: green;
-        
-        border-radius: 7px;
-        height: 40px;
-        width: 100px;
-    }
 
-      .checkoutbtnn{
-         margin-top: 10px;
-         margin-left: 510px;
-          border: none;
-          background-color: green;
-         
-          border-radius: 7px;
-          height: 40px;
-          width: 100px;
-      }
+.imgg {
+  height: 200px;
+  width: 200px;
+  margin-left: 300px;
+}
 
-      .llk{
-          display: flex;
-          
-      }
+.titlee {
+  background-color: black;
+  margin-top: 15px;
+  padding-left: 30px;
+  color: aliceblue;
+  display: flex;
+}
+
+.titlee h2 {
+  text-align: left;
+}
+
+
+.cuponbtn {
+  margin-top: 10px;
+
+
+  background-color: green;
+
+  border-radius: 7px;
+  height: 40px;
+  width: 100px;
+}
+
+.checkoutbtnn {
+  margin-top: 10px;
+  margin-left: 510px;
+  border: none;
+  background-color: green;
+
+  border-radius: 7px;
+  height: 40px;
+  width: 100px;
+}
+
+.llk {
+  display: flex;
+
+}

@@ -1,4 +1,4 @@
-import {addtoCart_value,decrement_value} from '../Types'
+import {newaddtoCart_value,decrement_value} from '../Types'
 
 const initialstate = {
     count: 0,
@@ -10,7 +10,7 @@ export default function(state = initialstate,action){
 
     switch(action.type){
 
-        case addtoCart_value:
+        case newaddtoCart_value:
             return{
                 ...state,
                 cart: action.payload.addcart

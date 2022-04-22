@@ -1,7 +1,7 @@
-import {faceProfile_value,decrement_value} from '../Types'
+import {faceProfile_value,decrement_value,addtoCart_value} from '../Types'
 import axios  from 'axios'
 
-export const faceProfile = async(a) => {
+export const faceProfile = () =>async(dispatch) => {
 
    let data= await axios.get(`http://localhost:5000/api/users/profile`, {
       headers: {
@@ -10,11 +10,18 @@ export const faceProfile = async(a) => {
           'auth': localStorage.getItem('auth')
       }
   })
-  console.log(data.data.cart.length)
-    return{
-        type: faceProfile_value,
-        payload: {cart:data.data.cart.length,profile:data.data}
-    }
+  console.log(data.data,'lool')
+   if(data.data){
+    // return dispatch({
+    //     type: faceProfile_value,
+    //     payload: {profile:data.data}
+    // })
+
+    return dispatch({
+        type: addtoCart_value,
+        payload: {addcart:data.data.cart}
+    })
+   }
 }
 
 export const decrement = (a) => {

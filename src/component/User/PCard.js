@@ -1,15 +1,31 @@
 import React from 'react'
 import './PCard.css'
 import axios from "axios";
-import {useSelector,useDispatch} from 'react-redux'
-import {addtoCart,decrement} from '../Services/Actions/AddtoCartAction'
 
 function PCard(props) {
 
+  const addC=async (a)=>{
+    if(localStorage.getItem('auth')){
+      let data= await axios.get(`http://localhost:5000/api/users/addToCart/?type=add&productId=${a}` ,{
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+              
+          }
 
-  const count = useSelector( state => state.CounterReducer.count)
-  const dispatch = useDispatch()
+         
+      }).then(response => {
 
+        props.cartSet(response.data)
+        
+        console.log(response.data.length,"haha");
+
+    })
+      
+    
+    }
+ 
+  }
 
   return (
     
@@ -19,7 +35,7 @@ function PCard(props) {
                       <h5 className="card-title">SKU NUMBER: {props.skunumber}</h5>
                       <p className="card-text">{props.price}</p>
                       
-                      <button  onClick={() => dispatch(addtoCart(props.idd,"add"))} className="default-btn">Add to Cart</button>
+                      <button  onClick={() => addC(props.idd)} className="default-btn">Add to Cart</button>
 
                     </div>
                   </div>
