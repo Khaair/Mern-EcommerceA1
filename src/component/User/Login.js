@@ -33,40 +33,16 @@ function Login(props) {
         localStorage.setItem('userrole', data.data.role);
         localStorage.setItem('username', data.data.username);
 
-       
-        await axios.get(`http://localhost:5000/api/users/profile`, {
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'auth': localStorage.getItem('auth')
-          }
-        }).then(async (data2)=>{
-         
+        console.log(data.data, 'www')
+        if (data.data.success) {
+          navigate('/')
+        }
+        else {
+          alert('Registraion faild')
+          navigate('/register')
+        }
 
-          console.log(data2.data[0].cart,"okkkk")
-
-          if(data2){
-            props.cset(data2.data[0].cart)
-            
-          }
-
-          console.log(data2, 'profile asche')
-
-      console.log(data.data, 'paisi')
-      if (data.data.success) {
-        navigate('/')
-      }
-      else {
-        alert('Registraion faild')
-        navigate('/register')
-      }
-
-
-        }).catch(err => {
-          this.setState({ mesg: err.response.data.message, loding: false })
-          this.notify();
-          console.log(err)
-        })
+     
       }).catch(err => {
         this.setState({ mesg: err.response.data.message, loding: false })
         this.notify();

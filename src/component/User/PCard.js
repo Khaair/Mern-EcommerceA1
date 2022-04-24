@@ -32,10 +32,14 @@ function PCard(props) {
     <div className="col-sm-4">
                   <div className="card cardd">
                     <div className="card-body">
-                      <h5 className="card-title">SKU NUMBER: {props.skunumber}</h5>
-                      <p className="card-text">{props.price}</p>
+                      <h5 className="card-title">Title: {props.item.title}</h5>
+                      <p className="card-text">{props.item.price}</p>
+                      <p className="card-text">{props.item.brand}</p>
+                      <p className="card-text">{props.item.weaight}</p>
+
+
                       
-                      <button  onClick={() => addC(props.idd)} className="default-btn">Add to Cart</button>
+                      <button  onClick={() => addC(props.item._id)} className="default-btn">Add to Cart</button>
 
                     </div>
                   </div>

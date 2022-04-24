@@ -9,12 +9,32 @@ function Navbar({cdata}) {
 
   const [lgin, setLgin] = useState([]);
 
+  
+
+   console.log(cdata,"cartt")
    
+
+  //  let cartt = [...cdata]
+
+
+  
+
+
+
+  
+
+   
+  // const quan = ca.forEach((el) => el);
+
+  // console.log(quan,"siii")
  
   useEffect(() => {
     const login = localStorage.getItem('auth')
-    console.log(login)
+    
+    // console.log(login)
     setLgin(login)
+    // console.log(cdata,'kkkk')
+    
 
   }, []);
 
@@ -30,7 +50,7 @@ function Navbar({cdata}) {
           </div>
           <div className='searchh'>
             <input className='inp' placeholder="Search Here" />
-            <button className='inpsearch' ><i class="fa fa-search" aria-hidden="true"></i>
+            <button className='inpsearch' ><i className="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
           <li> <Link className='lnk' to="/">Home</Link> </li>

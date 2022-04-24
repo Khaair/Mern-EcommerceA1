@@ -10,7 +10,7 @@ function Home(props) {
 
   const [product, setProduct] = useState([]);
 
-  // console.log(product)
+  // console.log(product,"pooo")
 
 
 
@@ -23,7 +23,7 @@ function Home(props) {
       }
     }).then(res => {
       // console.log(res.data.products)
-
+      // console.log(res,'refrs')
       setProduct(res.data.products)
 
       // this.setState({profile:res.data})
@@ -89,7 +89,7 @@ function Home(props) {
             {product.map((item, ind) => {
               return (
 
-                <PCard  key = {ind} skunumber={item.skunumber} price={item.price} idd = {item._id}  cartSet={props.cartSet}/>
+                <PCard  key = {ind} item={item}  cartSet={props.cartSet}/>
               )
             })}
 

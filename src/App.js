@@ -42,7 +42,7 @@ function App() {
 
       <Routes>
         
-        <Route exact path="/" element={<User />}>
+        <Route exact path="*" element={<User />}>
           <Route path="home" element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="buy" element={<Buy />} />
