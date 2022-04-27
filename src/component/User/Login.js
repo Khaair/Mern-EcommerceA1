@@ -10,6 +10,9 @@ function Login(props) {
 
   // const [loginok, setLoginok] = useState('');
 
+
+  
+
  
 
   
@@ -33,7 +36,7 @@ function Login(props) {
         localStorage.setItem('userrole', data.data.role);
         localStorage.setItem('username', data.data.username);
 
-        console.log(data.data, 'www')
+        // console.log(data.data, 'www')
         if (data.data.success) {
           navigate('/')
         }
@@ -87,6 +90,7 @@ function Login(props) {
           </div>
 
           <button className="btn btn-primary mt-3" type="button" onClick={sendDatatoApp} >Login</button>
+
         </form>
 
       </div>

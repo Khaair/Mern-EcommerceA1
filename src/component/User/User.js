@@ -1,7 +1,6 @@
-import React, { useState,useEffect } from 'react'
-import Buy from './Buy'
+import React, { useState, useEffect } from 'react';
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
+import Axios from "axios";
 
 
 import Navbar from './Navbar'
@@ -22,147 +21,199 @@ import Login from './Login';
 
 
 function User() {
-  const [cdata, setC] = useState([]);
-  const [ddata, setD] = useState([]);
 
-  console.log(ddata,'yeaaaap')
+  const [addtocart, setAddtocart] = useState([]);
+  const [totalprice, setTotalprice] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [profile, setProfile] = useState([]);
+  const [addtocarthandeler, setAddtocarthandeler] = useState([]);
 
-  
+
+
+  console.log(addtocart, "addtocartokk")
+  console.log(totalprice, "priceokk")
+  console.log(cart, "cartokkkk") 
+  console.log(profile, "profileokk")
+  console.log(addtocarthandeler, "addtocarthandeler")
+
+
+
 
   useEffect(async() => {
-  try {
 
-    await axios.get(`http://localhost:5000/api/users/profile`, {
+
+    // first fetch usercart
+
+    await Axios.get(`http://localhost:5000/api/users/profile`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'auth': localStorage.getItem('auth')
       }
-    }).then(async (data2)=>{
-     
-  
-      // console.log(data2.data[0].cart,"yeap")
-  
-      if(data2){
-        setC(data2.data[0].cart)
-        
+    }).then(async (responseok) => {
+
+      // console.log(responseok.data, "responseokkkkkkkk")
+
+      // if(responseok.data[0] && localStorage.getItem('auth') )
+      // this.setState({wish:responseok.data[0].wishlist,wishlistnumber:responseok.data[0].wishlist.length})
+      let cartItems = [];
+      let wishitems = []
+      if (responseok.data && responseok.data[0]) {
+        if (localStorage.getItem('auth') && responseok.data[0].cart) {
+          if (responseok.data[0].cart.length > 0) {
+
+            responseok.data[0].cart.forEach(item => {
+              cartItems.push(item.id)
+            });
+
+
+          }
+        }
+        if (localStorage.getItem('auth') && responseok.data[0].wishlist) {
+          if (responseok.data[0].wishlist.length > 0) {
+
+            responseok.data[0].wishlist.forEach(item => {
+              wishitems.push(item.id)
+            });
+
+
+          }
+        }
       }
-  
-      // console.log(data2, 'profile asche')
-  
-  
-  
-  
-    }).catch(err => {
-      this.setState({ mesg: err.response.data.message, loding: false })
-      this.notify();
-      console.log(err)
-    })
-   
-  }
-  catch(err) {
 
-    console.log(err)
-    
-  }
+      if (wishitems.length) {
+        await Axios.get(`http://localhost:5000/api/product/products_by_id?id=${wishitems}&type=array`)
+          .then(result => {
+            console.log(result.data,"wish")
+            // this.setState({wish:result.data,wishlistnumber:result.data.length})
+          })
+      }
+      else {
+        // this.setState({wish:[],wishlistnumber:0 })
+      }
 
-  },[]);
+      if (cartItems.length) {
+        await Axios.get(`http://localhost:5000/api/product/products_by_id?id=${cartItems}&type=array`)
+          .then(response => {
+            //   console.log(responseok.data.cart)
 
 
 
-  let arr = []
-  for (var key in cdata) {
-   var obj = cdata[key].quantity;
-   arr.push(obj)
-   
-}
-const sum = arr.reduce((a, b) => a + b, 0);
+            //Make CartDetail inside Redux Store 
+            // We need to add quantity data to Product Information that come from Product Collection. 
+            let totalproduct = 0;
+            let price = 0;
+
+            responseok.data[0].cart.forEach(cartItem => {
+              response.data.forEach((productDetail, i) => {
+                if (cartItem.id === productDetail._id) {
+                  response.data[i].quantity = cartItem.quantity;
+                  totalproduct += parseInt(cartItem.quantity)
+                  price += parseInt(productDetail.price) * parseInt(cartItem.quantity)
 
 
-    
+                }
+              })
+            })
 
 
+            setAddtocart(totalproduct)
+            setTotalprice(price)
+            setCart(response.data)
+            setProfile(responseok.data)
+            
 
 
+            // this.setState({ addtocart: totalproduct, cart: response.data, totalprice: price })
 
 
-  
+          }).catch(err => {
+            // this.componentDidMount()
+            console.log(err)
+            setAddtocart(0)
+            setTotalprice(0)
+            setCart([])
+            // this.setState({ addtocart: 0, cart: [], totalprice: 0 })
+          })
 
-  const cartSet = (data) => {
-    setC(data)
-
-   
-
-  }
-
-  // console.log(cdata, "zooooo")
-
-  let ff = [...cdata]
-
-  let cartId = ff.map(e => e.id )
-  
-  // console.log(cartId, "here")
-
-
-  useEffect(async() => {
-    if (cartId.length) {
-    await axios.get(`http://localhost:5000/api/product/products_by_id?id=${cartId}&type=array`)
-      .then(response => {
-        console.log(response,"response")
-        setD(response.data)
-
-
-
-        //Make CartDetail inside Redux Store 
-        // We need to add quantity data to Product Information that come from Product Collection. 
-        let totalproduct = 0;
-        let price = 0;
-
-        console.log(response.data,"oiiiii")
-
-        // response.data[0].cart.forEach(cartItem => {
-        //   response.data.forEach((productDetail, i) => {
-        //     if (cartItem.id === productDetail._id) {
-        //       response.data[i].quantity = cartItem.quantity;
-        //       totalproduct += parseInt(cartItem.quantity)
-        //       price += parseInt(productDetail.price) * parseInt(cartItem.quantity)
-
-        //       console.log(price,"price")
-
-        //     }
-        //   })
-        // })
-        // this.setState({ addtocart: totalproduct, cart: response.data, totalprice: price })
-
-        console.log(totalproduct)
-      }).catch(err => {
-        // this.componentDidMount()
-        console.log(err)
+      } else {
+        setAddtocart(0)
+        setTotalprice(0)
+        setCart([])
         // this.setState({ addtocart: 0, cart: [], totalprice: 0 })
-      })
+      }
 
-  } else {
-    // this.setState({ addtocart: 0, cart: [], totalprice: 0 })
-  }
+
+    })
+
 
 
   }, []);
-  
+ 
+
+  let addToCarthandler = (_id, type) => {
+
+    if (!localStorage.getItem('auth'))
+      return alert('login to cart product')
+    Axios.get(`http://localhost:5000/api/users/addToCart?productId=${_id}&type=${type}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'auth': localStorage.getItem('auth')
+      }
+    })
+      .then(response => {
+        
+        // this.componentDidMount()
+
+       
+          setAddtocarthandeler(response.data)
+        
+
+        console.log(response.data, "addToCarthandler");
+   
+      }
+
+      );
+  }
 
 
+  let removeFromCart = (_id) => {
 
+    if (!localStorage.getItem('auth'))
+        return alert('login to cart product')
+    Axios.get(`http://localhost:5000/api/users/removeFromCart?productId=${_id}`, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'auth': localStorage.getItem('auth')
+        }
+    })
+        .then(response => {
+            console.log('err');
+            this.componentDidMount();
+            console.log(response.data);
 
-  
+        }
 
+        ).catch(err => {
+            console.log(err);
+        })
+
+}
+
+ 
 
 
   return (
     <div>
-{/* {JSON.stringify(cdata)} */}
-      <Navbar cdata={sum} />
+      {/* {JSON.stringify(cdata)} */}
+      {/* cdata={sum} */}
+      <Navbar addtocarthandeler={addtocarthandeler} />
       <Routes>
-        <Route path="*" element={<Home cartSet={cartSet}  />} />
-        
+        {/* cartSet={cartSet}  */}
+        <Route path="*" element={<Home addToCarthandler={addToCarthandler} />} />
+
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -171,7 +222,7 @@ const sum = arr.reduce((a, b) => a + b, 0);
         <Route path="/wishlist" element={<Wishlist />} />
 
         <Route path="/register" element={<Register />} />
-        <Route path="/addtocart" element={<AddtoCart  ddata= {ddata} />} />
+        <Route path="/addtocart" element={<AddtoCart cart = {cart}  addToCarthandler={addToCarthandler} removeFromCart={removeFromCart}/>} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/order" element={<Order />} />

@@ -1,32 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './Navbar.css'
-import {useSelector,useDispatch} from 'react-redux'
-import {increment,decrement} from '../Services/Actions/CounterAction'
+// import {useSelector,useDispatch} from 'react-redux'
+// import {increment,decrement} from '../Services/Actions/CounterAction'
 
 
-function Navbar({cdata}) {
+function Navbar({addtocarthandeler}) {
 
   const [lgin, setLgin] = useState([]);
 
+ 
+
+  let naddtocarthandeler = [...addtocarthandeler]
+
+
+
+
+  let arr = []
+  for (var key in naddtocarthandeler) {
+    var obj = naddtocarthandeler[key].quantity;
+    arr.push(obj)
+
+  }
+  const sum = arr.reduce((a, b) => a + b, 0);
   
 
-   console.log(cdata,"cartt")
+  // console.log(sum,"summm")
+
+ 
+
+    
+
+
+  
+
+
+
+  
+
    
-
-  //  let cartt = [...cdata]
-
-
-  
-
-
-
-  
-
-   
-  // const quan = ca.forEach((el) => el);
-
-  // console.log(quan,"siii")
+ 
  
   useEffect(() => {
     const login = localStorage.getItem('auth')
@@ -39,7 +52,7 @@ function Navbar({cdata}) {
   }, []);
 
   
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   return (
 
     <>
@@ -57,7 +70,7 @@ function Navbar({cdata}) {
           
           <li> <Link className='lnk' to="/about">Top Sell</Link> </li>
           <li> <Link className='lnk' to="/contact">Offers</Link> </li>  
-          <li> <Link className='lnk' to="/addtocart"><img style={{ height: '40px' }} src='img/addtocart.png' alt='kii' />{lgin?<sup>{cdata}</sup>:<><></></>}</Link> </li>
+          <li> <Link className='lnk' to="/addtocart"><img style={{ height: '40px' }} src='img/addtocart.png' alt='kii' />{lgin?<sup>{sum}</sup>:<><></></>}</Link> </li>
           <li> <Link className='lnk' to="/wishlist"><img style={{ height: '40px' }} src='img/wishlistt.png' alt='kii' /></Link> </li>
           <li> <Link className='lnk' to="/profile"><img style={{ height: '30px' }} src='img/proo.png' alt='kii' /></Link> </li>
           <li> <Link className='lnk' to="/admin"><img style={{ height: '35px' }} src='img/Admin.png' alt='kii' /></Link> </li>
