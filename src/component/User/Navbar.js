@@ -5,42 +5,23 @@ import './Navbar.css'
 // import {increment,decrement} from '../Services/Actions/CounterAction'
 
 
-function Navbar({addtocarthandeler}) {
+function Navbar({addtocarthandeler,wish}) {
 
   const [lgin, setLgin] = useState([]);
 
- 
+  // let naddtocarthandeler = [...addtocarthandeler]
 
-  let naddtocarthandeler = [...addtocarthandeler]
+  // let arr = []
+  // for (var key in naddtocarthandeler) {
+  //   var obj = naddtocarthandeler[key].quantity;
+  //   arr.push(obj)
 
-
-
-
-  let arr = []
-  for (var key in naddtocarthandeler) {
-    var obj = naddtocarthandeler[key].quantity;
-    arr.push(obj)
-
-  }
-  const sum = arr.reduce((a, b) => a + b, 0);
+  // }
+  // const sum = arr.reduce((a, b) => a + b, 0);
   
 
   // console.log(sum,"summm")
 
- 
-
-    
-
-
-  
-
-
-
-  
-
-   
- 
- 
   useEffect(() => {
     const login = localStorage.getItem('auth')
     
@@ -70,8 +51,8 @@ function Navbar({addtocarthandeler}) {
           
           <li> <Link className='lnk' to="/about">Top Sell</Link> </li>
           <li> <Link className='lnk' to="/contact">Offers</Link> </li>  
-          <li> <Link className='lnk' to="/addtocart"><img style={{ height: '40px' }} src='img/addtocart.png' alt='kii' />{lgin?<sup>{sum}</sup>:<><></></>}</Link> </li>
-          <li> <Link className='lnk' to="/wishlist"><img style={{ height: '40px' }} src='img/wishlistt.png' alt='kii' /></Link> </li>
+          <li> <Link className='lnk' to="/addtocart"><img style={{ height: '40px' }} src='img/addtocart.png' alt='kii' />{lgin?<sup>{addtocarthandeler.length}</sup>:<><></></>}</Link> </li>
+          <li> <Link className='lnk' to="/wishlist"><img style={{ height: '40px' }} src='img/wishlistt.png' alt='kii' /><sup>{wish.length}</sup></Link> </li>
           <li> <Link className='lnk' to="/profile"><img style={{ height: '30px' }} src='img/proo.png' alt='kii' /></Link> </li>
           <li> <Link className='lnk' to="/admin"><img style={{ height: '35px' }} src='img/Admin.png' alt='kii' /></Link> </li>
 

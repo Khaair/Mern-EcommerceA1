@@ -89,7 +89,7 @@ function Home(props) {
             {product.map((item, ind) => {
               return (
 
-                <PCard  key = {ind} item={item}  cartSet={props.cartSet} addToCarthandler={props.addToCarthandler}/>
+                <PCard  key = {ind} item={item}  cartSet={props.cartSet} addToCarthandler={props.addToCarthandler} addTowishlist={props.addTowishlist}/>
               )
             })}
 

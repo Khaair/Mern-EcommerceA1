@@ -35,3 +35,13 @@
   .imagee{
       height: 160px;
   }
+
+  .pcardmainchild{
+    position: absolute; 
+    /*position: relative;
+    //position: fixed;*/
+    left: 345px;
+    top: 15px;
+    
+   
+  }

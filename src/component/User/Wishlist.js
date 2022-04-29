@@ -1,49 +1,70 @@
-import React from 'react'
-import './Wishlist.css'
+import React from 'react';
+import './Wishlist.css';
 import { Link } from "react-router-dom";
 
+export default function Wishlist(props) {
 
-export default function Wishlist() {
-    return (
-        <div>
+  let nwish= [...props.wish]
 
-            <div className="div1">
+  console.log(nwish,"profile")
 
-                <div className="Addcontainer">
-                    <div className='titlee'>
-                        <h2>My Wish List</h2>
-                        <Link to="/"><button className='wishbtnn'>Continue Shoping</button></Link>
-                    </div>
-
-                    <div className='addtocartone'>
-                        <img className='addtocartimg' src='img/p1.jpg' alt='loo' />
-                        <div className='adddetails'>
-                            <h3>Title</h3>
-                            <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
+   return (
+        <>
+            <div>
+                <div className="div1">
+                    <div className="Addcontainer">
+                        <div className='titlee'>
+                            <h2>My Cart</h2>
+                            <Link to="/"><button className='addbtnn'>Continue Shoping</button></Link>
                         </div>
 
+                        {nwish.map((item, ind) => {
+                            console.log(nwish,"nprofile")
+                            return (
+                                <div className='uu'>
+                                    <div className='uuone'>
+
+                                        <div className='addtocartone'>
+                                            <img className='addtocartimg' src='img/p1.jpg' alt='loo' />
+                                            <div className='adddetails'>
+                                                <h3>{item.title}</h3>
+                                                <p>{item.brand}</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div className='wishuutwo'>
+
+                                        <div className='wishuubtn'>
+                                            <p>{item.price}*</p>
+
+
+                                            <button   type="button" onClick={() => props.addToCarthandler(item._id, "add")} >Add to Cart</button>
+
+                                            <div>
+                                                <button className="deletebtn" type="button" onClick={() => props.removeFromWish(item._id)} ><i className="fa fa-trash-o" style={{ fontSize: '30px', color: 'red', marginLeft: '10px' }} /></button>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            )
+                        })}
+
+                  
                     </div>
+                </div>
 
-
-                    <hr></hr>
-
-
-                    <div className='addtocartone'>
-                        <img className='addtocartimg' src='img/p1.jpg' alt='loo' />
-                        <div className='adddetails'>
-                            <h3>Title</h3>
-                            <p>Since then, CPM has evolved as workplace practices and technologies have ... and forecasting data -- such as revenue, expenses and inventory reports.</p>
-                        </div>
-
-                    </div>
-
-
-                    <hr></hr>
-
-
+                <div className='div2'>
 
                 </div>
+
+
             </div>
-        </div>
+
+        </>
     )
 }

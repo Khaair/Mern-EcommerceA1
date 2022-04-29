@@ -1,35 +1,10 @@
 import React from 'react';
 import './AddtoCart.css';
 import { Link } from "react-router-dom";
-
 export default function AddtoCart(props) {
 
 
-
-    let ncart= [...props.cart]
-
-        // let totalproduct = 0;
-        // let price = 0;
-
-        // console.log(cdata[0].cart,"oiiiii")
-
-        // cdata[0].cart.forEach(cartItem => {
-        //   response.data.forEach((productDetail, i) => {
-        //     if (cartItem.id === productDetail._id) {
-        //       response.data[i].quantity = cartItem.quantity;
-        //       totalproduct += parseInt(cartItem.quantity)
-        //       price += parseInt(productDetail.price) * parseInt(cartItem.quantity)
-
-        //       console.log(price,"price")
-
-        //     }
-        //   })
-        // })
-        // this.setState({ addtocart: totalproduct, cart: response.data, totalprice: price })
-
-        // console.log(totalproduct)
-
-    return (
+   return (
         <>
             <div>
                 <div className="div1">
@@ -39,10 +14,10 @@ export default function AddtoCart(props) {
                             <Link to="/"><button className='addbtnn'>Continue Shoping</button></Link>
                         </div>
 
-                        {ncart.map((item, ind) => {
+                        {props.cart.length && props.cart.map((item, ind) => {
                             // console.log(nddata,"mappp")
                             return (
-                                <div className='uu'>
+                                <div className='uu' key={ind}>
                                     <div className='uuone'>
 
                                         <div className='addtocartone'>
@@ -59,20 +34,18 @@ export default function AddtoCart(props) {
                                         <div className='uubtn'>
                                             <p>{item.price}*</p>
 
-              
 
-                                            <button  type="button"  onClick={()=>props.addToCarthandler(item._id,"minus")} className="minus" value="-">-</button>
 
-                                            <p  step={1} max={99} min={1} value={item.quantity} title="Qty" className="qty" size={4}>{item.quantity}</p>
-                                            <button className="uubuttonn" type="button" onClick={()=>props.addToCarthandler(item._id,"add")}  value="+">+</button>
+                                            <button type="button" onClick={() => props.addToCarthandler(item._id, "minus")} className="minus" value="-">-</button>
+
+                                            <p step={1} max={99} min={1}  title="Qty" className="qty" size={4}>{item.quantity}</p>
+                                            <button className="uubuttonn" type="button" onClick={() => props.addToCarthandler(item._id, "add")} value="+">+</button>
 
                                             <div>
-                                            <button className="deletebtn" type="button" onClick={()=>props.removeFromCart(item._id)}   value="+"><i className="fa fa-trash-o" style={{ fontSize: '30px', color: 'red', marginLeft: '10px' }} /></button>
+                                                <button className="deletebtn" type="button" onClick={() => props.removeFromCart(item._id)} value="+"><i className="fa fa-trash-o" style={{ fontSize: '30px', color: 'red', marginLeft: '10px' }} /></button>
 
                                             </div>
 
-
-                                            
 
                                         </div>
                                     </div>
@@ -97,9 +70,7 @@ export default function AddtoCart(props) {
                 <div className='div2'>
 
                 </div>
-
-
-            </div>
+             </div>
 
         </>
     )

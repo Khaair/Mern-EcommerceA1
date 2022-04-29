@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Axios from "axios";
-
-
 import Navbar from './Navbar'
 import Profile from './Profile'
 import Home from './Home';
@@ -27,6 +25,8 @@ function User() {
   const [cart, setCart] = useState([]);
   const [profile, setProfile] = useState([]);
   const [addtocarthandeler, setAddtocarthandeler] = useState([]);
+  const [wish, setWish] = useState([]);
+
 
 
 
@@ -35,6 +35,8 @@ function User() {
   console.log(cart, "cartokkkk") 
   console.log(profile, "profileokk")
   console.log(addtocarthandeler, "addtocarthandeler")
+  console.log(wish, "wish")
+
 
 
 
@@ -84,7 +86,12 @@ function User() {
       if (wishitems.length) {
         await Axios.get(`http://localhost:5000/api/product/products_by_id?id=${wishitems}&type=array`)
           .then(result => {
-            console.log(result.data,"wish")
+
+           
+
+            setWish(result.data)
+            // console.log(result.data,"wishhhhhhhhh")
+
             // this.setState({wish:result.data,wishlistnumber:result.data.length})
           })
       }
@@ -149,7 +156,36 @@ function User() {
 
 
   }, []);
- 
+
+
+  let addTowishlist = (_id, type) => {
+    console.log(_id,"idddddddddddddd")
+    if (!localStorage.getItem('auth'))
+        return alert('Please Login to add to wish list')
+    Axios.get(`http://localhost:5000/api/users/addToWish?productId=${_id}&type=${type}`, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'auth': localStorage.getItem('auth')
+        }
+    })
+        .then(response => {
+            
+            if(response.data.duplicate)     
+            alert('Already in Your Wishlist')
+            // else
+            //  this.componentDidMount()
+
+           
+           
+
+        }
+
+        );
+
+}
+
+
 
   let addToCarthandler = (_id, type) => {
 
@@ -163,8 +199,15 @@ function User() {
       }
     })
       .then(response => {
+
+        // if(response.data.duplicate) 
+        
+        // console.log(response.data.duplicate,"Already in Your Cartlist")
+        // alert('Already in Your Cartlist')
         
         // this.componentDidMount()
+
+      
 
        
           setAddtocarthandeler(response.data)
@@ -191,7 +234,8 @@ function User() {
     })
         .then(response => {
             console.log('err');
-            this.componentDidMount();
+            addToCarthandler()
+            // this.componentDidMount();
             console.log(response.data);
 
         }
@@ -202,6 +246,31 @@ function User() {
 
 }
 
+
+let removeFromWish = (_id) => {
+
+  if (!localStorage.getItem('auth'))
+      return alert('login to cart product')
+  Axios.get(`http://localhost:5000/api/users/removeFromWish?productId=${_id}`, {
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'auth': localStorage.getItem('auth')
+      }
+  })
+      .then(response => {
+          console.log('err');
+          // this.componentDidMount();
+          console.log(response.data);
+
+      }
+
+      ).catch(err => {
+          console.log(err);
+      })
+
+}
+
  
 
 
@@ -209,17 +278,17 @@ function User() {
     <div>
       {/* {JSON.stringify(cdata)} */}
       {/* cdata={sum} */}
-      <Navbar addtocarthandeler={addtocarthandeler} />
+      <Navbar addtocarthandeler={addtocarthandeler} wish={wish} />
       <Routes>
         {/* cartSet={cartSet}  */}
-        <Route path="*" element={<Home addToCarthandler={addToCarthandler} />} />
+        <Route path="*" element={<Home addToCarthandler={addToCarthandler} addTowishlist={addTowishlist} />} />
 
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/single" element={<Single />} />
-        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/wishlist" element={<Wishlist wish = {wish} addToCarthandler ={addToCarthandler} removeFromWish={removeFromWish}/>} />
 
         <Route path="/register" element={<Register />} />
         <Route path="/addtocart" element={<AddtoCart cart = {cart}  addToCarthandler={addToCarthandler} removeFromCart={removeFromCart}/>} />
