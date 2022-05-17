@@ -29,7 +29,7 @@ function User() {
 
 
 
-
+ 
   console.log(addtocart, "addtocartokk")
   console.log(totalprice, "priceokk")
   console.log(cart, "cartokkkk") 
@@ -292,7 +292,7 @@ let removeFromWish = (_id) => {
 
         <Route path="/register" element={<Register />} />
         <Route path="/addtocart" element={<AddtoCart cart = {cart}  addToCarthandler={addToCarthandler} removeFromCart={removeFromCart}/>} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<Checkout totalprice={totalprice} cart={cart}/>} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/order" element={<Order />} />
         <Route path="/ordertracking" element={<OrderTracking />} />

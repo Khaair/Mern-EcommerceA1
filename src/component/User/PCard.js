@@ -6,29 +6,6 @@ function PCard(props) {
 
 
 
-  // const addC=async (a)=>{
-  //   if(localStorage.getItem('auth')){
-  //     let data= await axios.get(`http://localhost:5000/api/users/addToCart/?type=add&productId=${a}` ,{
-  //         headers: {
-  //             'Accept': 'application/json',
-  //             'Content-Type': 'application/json'
-
-  //         }
-
-
-  //     }).then(response => {
-
-  //       props.cartSet(response.data)
-
-  //       console.log(response.data.length,"haha");
-
-  //   })
-
-
-  //   }
-
-  // }
-
   return (
 
     <div className="col-sm-4">
