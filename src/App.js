@@ -69,7 +69,7 @@ function App() {
         <Route path="usermanage" element={<UserManage />} />
         <Route path="edituserprofile" element={<EditUserProfile />} />
         <Route path="editproduct" element={<EditProduct />} />
-        <Route path="editorder" element={<EditOrder />} />
+        <Route path="/editorder/:orderid" element={<EditOrder />} />
         <Route path="adminregister" element={<AdminRegister />} />
 
         

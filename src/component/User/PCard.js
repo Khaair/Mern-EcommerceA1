@@ -8,11 +8,11 @@ function PCard(props) {
 
   return (
 
-    <div className="col-sm-4">
+    <div className="col-sm-3">
       <div className="card cardd">
         <div className="card-body">
           <div className='pcardmaincon'>
-            <img style={{ height: '150px', width: "100%" }} src='img/laptopp.jpg' alt='loo' />
+            <img style={{ height: '150px', width: "255px" }} src='img/laptopp.jpg' alt='loo' />
 
             <div className='pcardmainchild'>
               <img onClick={() => props.addTowishlist(props.item._id, "add")} style={{ height: '50px', cursor: "pointer" }} src='img/wishlistt.png' alt='kii' />

@@ -2,10 +2,11 @@
 .cardd {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     
-    margin: auto;
+    
     text-align: center;
     font-family: arial;
     margin: 10px;
+    width: auto;
     
   }
   
@@ -40,7 +41,7 @@
     position: absolute; 
     /*position: relative;
     //position: fixed;*/
-    left: 345px;
+    left: 230px;
     top: 15px;
     
    

@@ -1,6 +1,6 @@
 .otcontainer{
     
-    height: 500px;
+    height: auto;
     margin: 30px;
     
     background-color: #F2F2F2;
@@ -8,6 +8,7 @@
     box-shadow: 5px black;
     border-radius: 20px;
     border: 1px solid gray;
+
 
     }
 .otouteroneimg{
@@ -21,6 +22,7 @@
     border: 2px solid gray;
     width: 106px;
     height: 108px;
+
 }
 
     .otinnercontainer{
@@ -34,6 +36,8 @@
     box-shadow: 5px black;
     border-radius: 10px;
     border: 1px solid gray;
+    display: flex;
+
    
 
     }

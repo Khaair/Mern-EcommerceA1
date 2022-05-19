@@ -55,12 +55,15 @@ export default function Order() {
                                     <td>{el.createdAt}</td>
 
                                     <td>
-                                    <button>make</button>
+                                    <td data-label="Invoices"><a href={`/invoice/${el.orderid}`}><button>print/save</button></a></td>
+
 
 
                                     </td>
-                                    <td> 
-                                    <Link to="/ordertracking"><button>Check</button></Link>
+                                    <td>
+                                   {/* <td data-label="Order Details"><a href={`/customerordertable/${item.orderid}`}><button>check</button></a></td> */}
+                                        
+                                    <Link to={`/ordertracking/${el.orderid}`}><button>Check</button></Link>
 
 
                                     </td>

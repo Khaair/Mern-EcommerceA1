@@ -16,6 +16,8 @@ import Order from './Order';
 import OrderTracking from './OrderTracking';
 import UserProfile from './UserProfile';
 import Login from './Login';
+import Invoice from './Invoice';
+
 
 
 function User() {
@@ -295,7 +297,12 @@ let removeFromWish = (_id) => {
         <Route path="/checkout" element={<Checkout totalprice={totalprice} cart={cart}/>} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/ordertracking" element={<OrderTracking />} />
+        {/* <Route exact path="/ordertracking/:orderid" render={props => <Customerordertable {...props} total={this.state.totalprice} addtocart={this.state.addtocart} />} /> */}
+
+        <Route path="/ordertracking/:orderid" element={<OrderTracking totalprice={totalprice} cart={cart} />} />
+        <Route exact path="/invoice/:orderid" render={props => <Invoice {...props} />} />
+         
+
         <Route path="/userprofile" element={<UserProfile />} />
         <Route path="/login" element={<Login />} />
 
